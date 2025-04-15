@@ -1,21 +1,19 @@
 #include "Tank.h"
 //the main tank class
 
-class Tank
+class Tank : public GameObject
 {
     private:
     /* data */
-    int playerid;
     int shellcount;
     int rows;
     int cols;
-    std::vector<int> position;
     std::vector<int> direction;
 
     public:
     //tank main functions
-    Tank::Tank(int playerid, std::vector<int> position, std::vector<int> direction):
-        playerid(playerid), shellcount(16), position(position), direction(direction)
+    Tank::Tank(int id, std::vector<int> position, std::vector<int> direction):
+        GameObject(id, position, 1), shellcount(16), direction(direction)
     {}
 
     void moveForward(bool forward) {
@@ -74,7 +72,6 @@ class Tank
         
     std::vector<int> getTankPosition() {}
     std::vector<int> getTankDirection() {}
-    int getTankPlayerid() {}
     int getShellCount() {}
             
 };
