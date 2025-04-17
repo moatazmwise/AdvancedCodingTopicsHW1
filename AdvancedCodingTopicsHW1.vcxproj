@@ -123,7 +123,6 @@
     <ClCompile Include="board.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Shell.cpp" />
     <ClCompile Include="Tank.cpp" />
     <ClCompile Include="tanks_game.cpp" />

@@ -64,18 +64,8 @@ void  Board::manipulate_cords(int& x, int& y) const{
 
 }
 
-bool Board::fileloading(const std::string & file ){
 
-    std::ifstream input(file);
-
-    if(! input){
-
-        std::cerr << "cannot open the file:"<< file <<".\n";
-
-        return false;
-
-    }
     
 
 
-}
+
