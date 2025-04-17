@@ -45,16 +45,14 @@ class Tank : public GameObject
             x = new_x;
         }
         else if (degrees == 45) {
-            // 45° rotation (axis-aligned ↔ diagonal)
+            // 45 degree rotation
             if (x == 0 || y == 0) {
-                // Axis-aligned → diagonal
                 int new_x = (x != 0) ? x : (right ? -y : y);
                 int new_y = (y != 0) ? y : (right ? x : -x);
                 x = new_x;
                 y = new_y;
             }
             else {
-                // Diagonal → axis-aligned
                 if (right) {
                     x = (x == y) ? x : 0;
                     y = (x == y) ? 0 : y;
@@ -65,7 +63,6 @@ class Tank : public GameObject
                 }
             }
         }
-        // Else: Invalid angle (do nothing)
     }
 
     bool shoot() {}

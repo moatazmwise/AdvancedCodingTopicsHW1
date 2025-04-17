@@ -4,7 +4,7 @@
 
 #include<fstream>
 
-#include "board.hpp"
+#include "board.h"
 
 Board::Board(int width,int height):
 

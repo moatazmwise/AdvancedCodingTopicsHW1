@@ -13,7 +13,7 @@ class GameObject
         GameObject(int id, std::vector<int> position, int health) 
         : id(id), position(position), health(health) {}
         
-        std::vector<int> getTankPosition() {
+        std::vector<int> getPosition() {
             return position;
         }
         int getHealth() {
