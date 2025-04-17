@@ -1,5 +1,4 @@
 #include "Shell.h"
-#include"Board.h"
 
 
 Shell::Shell(Position start, std::pair<int, int> direction, int owner)
@@ -7,8 +6,8 @@ Shell::Shell(Position start, std::pair<int, int> direction, int owner)
 
 void Shell::move( int height, int width) {
         if (!active) return;
-        position.x = (position.x + 2 * directionDelta.first + width) % width;
-        position.y = (position.y + 2 * directionDelta.second + height) % height;
+        position.x = (position.x + 2 * direction.first + width) % width;
+        position.y = (position.y + 2 * direction.second + height) % height;
     }
     
 
@@ -16,11 +15,11 @@ void Shell::move( int height, int width) {
 std::pair<Position, Position> Shell::getPathThisStep() const {
     Position first = {
         (position.x + direction.first),
-        (position.y + directionDelta.second)
+        (position.y + direction.second)
     };
     Position second = {
-        (position.x + 2 * directionDelta.first),
-        (position.y + 2 * directionDelta.second)
+        (position.x + 2 * direction.first),
+        (position.y + 2 * direction.second)
     };
     return {first, second};
 }

@@ -1,6 +1,6 @@
 #pragma once
 #include <utility>
-class Board;
+
 
 struct Position {
     int x, y;
@@ -16,19 +16,14 @@ class Shell {
 public:
     Shell(Position start, std::pair<int, int> direction, int owner);
 
-    void move(int Width, int Height);
+    void Shell::move( int height, int width) ;
     std::pair<Position, Position> getPathThisStep() const;
 
     Position getPosition() const;
     std::pair<int, int> getDirection() const;
-    int getOwnerId() const;
+    int getOwner() const;
     bool isActive() const;
 
     void explode();
 
-private:
-    Position position;
-    std::pair<int, int> directionDelta; // dx, dy
-    int ownerId;
-    bool active;
 };
