@@ -1,35 +1,27 @@
 #include "Tank.h"
 //the main tank class
 
-class Tank : public GameObject
-{
-    private:
-    /* data */
-    int shellcount;
-    int rows;
-    int cols;
-    std::vector<int> direction;
-
-    public:
-    //tank main functions
-    Tank::Tank(int id, std::vector<int> position, std::vector<int> direction):
-        GameObject(id, position, 1), shellcount(16), direction(direction)
+ 
+//tank main functions
+Tank::Tank(int playerid, std::vector<int> position, std::vector<int> direction, int rows, int cols):
+	GameObject(char(playerid), position, 1, rows, cols), shellcount(16), direction(direction), playerid(playerid)
     {}
 
-    void moveForward(bool forward) {
-        if (forward) {
-            position[0] += direction[0];
-            position[1] += direction[1];
-        } else {
-            position[0] -= direction[0];
-            position[1] -= direction[1];
-        }
-        // tanks move through the border of the map to the other side
-        //using modol operator to wrap around the map
-        position[0] = position[0] % cols;
-        position[1] = position[1] % rows;
+void Tank::moveForward(bool forward) {
+    if (forward) {
+        position[0] += direction[0];
+        position[1] += direction[1];
     }
-    void turn(string orientation,int degrees) {
+    else {
+        position[0] -= direction[0];
+        position[1] -= direction[1];
+    }
+    // tanks move through the border of the map to the other side
+    //using modol operator to wrap around the map
+    position[0] = position[0] % cols;
+    position[1] = position[1] % rows;
+}
+void Tank::turn(string orientation,int degrees) {
         //turning the tank in the direction of the degrees
         bool right = 0;
         if (orientation == "left")right = false;
@@ -65,10 +57,19 @@ class Tank : public GameObject
         }
     }
 
-    bool shoot() {}
-        
-    std::vector<int> getTankPosition() {}
-    std::vector<int> getTankDirection() {}
-    int getShellCount() {}
-            
-};
+bool Tank::shoot() {
+	//shooting the shell
+	return true;
+}      
+
+std::vector<int> Tank::getDirection() {
+	return direction;
+}
+
+int Tank::getShellCount() {
+	return shellcount;
+}
+
+int Tank::getPlayerid() {
+	return playerid;
+}

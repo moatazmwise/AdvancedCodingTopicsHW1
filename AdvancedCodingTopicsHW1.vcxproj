@@ -132,7 +132,6 @@
     <ClInclude Include="board.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
-    <ClInclude Include="Logger.h" />
     <ClInclude Include="Shell.h" />
     <ClInclude Include="Tank.h" />
   </ItemGroup>

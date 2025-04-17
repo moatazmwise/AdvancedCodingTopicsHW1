@@ -7,16 +7,16 @@ struct Position {
 };
 
 class Shell {
-    private:
+private:
     Position position;
     std::pair<int, int> direction;
     int owner;
     bool active;
-    
+
 public:
     Shell(Position start, std::pair<int, int> direction, int owner);
 
-    void Shell::move( int height, int width) ;
+    void Shell::move(int height, int width);
     std::pair<Position, Position> getPathThisStep() const;
 
     Position getPosition() const;
