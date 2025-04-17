@@ -1,16 +1,52 @@
-#include "Board.h"
-#include "GameObject"
-class Board
-{
-private:
-    std::vector<std::vector<GameObject>> board; // 2D vector to represent the board
-public:
-    Board(/* args */);
-    ~Board();
-};
+# pragma once
 
-Board::Board(/* args */)
-{
+#include<iostream>
+
+#include<fstream>
+
+#include "board.h"
+
+Board::Board(int width,int height):
+
+    board_width(width), board_height(height),board_matrix(height,std::vector<Cell>(width))
+    {
+
+    }
+ const Cell& Board::getCell(int x,int y) const{
+
+    manipulate_cords(x,y);
+
+    return board_matrix[y][x];
+
+
+ }
+
+ int Board::getwidth() const{
+
+    return board_width;
+
+ }
+
+int Board::getheight() const{
+
+    return board_height;
+}
+
+void Board::setcell(Type type , int x, int y){
+
+    manipulate_cords(x,y);
+
+    board_matrix[y][x].cell_type= type;
+
+    if(type != Type::wall){
+
+        board_matrix[y][x].num_wallhits=0;
+    }
+
+
+
+
+
 }
 
 void  Board::manipulate_cords(int& x, int& y) const{
