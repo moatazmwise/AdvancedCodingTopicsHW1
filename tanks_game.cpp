@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -34,7 +35,7 @@ bool read_input_file(const std::string& filePath) {
             }
         }
     }
-    printf("Width: %d, Height: %d\n", width, height);
+    printf("Width:%d, Height:%d\n", width, height);
     return true;
 }
 
@@ -45,14 +46,14 @@ int main(int argc, char* argv[]) {
     }
 
     std::string inputFilePath = argv[1];
-    GameManager gameManager;
+    GameManager game_manager;
 
     if (!read_input_file(inputFilePath)) {
         return 1;
     }
 
-    gameManager.initializePlayers();  // Load algorithms, setup state, etc.
-    gameManager.runGameLoop();        // Main game loop
+    game_manager.initializePlayers();  // Load algorithms, setup state, etc.
+    game_manager.runGameLoop();        // Main game loop
 
     return 0;
 }
