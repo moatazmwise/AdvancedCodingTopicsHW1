@@ -7,6 +7,12 @@
 std::string filename = "input_errors.txt"; // error file name
 int width = 0; // board width
 int height = 0; // board height
+//tanks positions
+int x1Pos = 0; // tank1 x position
+int y1Pos = 0; // tank1 y position
+int x2Pos = 0; // tank2 x position
+int y2Pos = 0; // tank2 y position
+
 
 void log_error(const std::string& message) {
     std::ofstream file(filename, std::ios::app);  // append mode
@@ -34,8 +40,41 @@ bool read_input_file(const std::string& filePath) {
                 height = std::stoi(dims.substr(xPos + 1));
             }
         }
+        //check if the line starts with tank1:
+        if (line.rfind("tank1:", 0) == 0) {
+            // Parse tank information
+            // If an error occurs, log it
+            std::string tankInfo = line.substr(line.find(":") + 1);
+            size_t commaPos = tankInfo.find(',');
+            if (commaPos != std::string::npos) {
+                std::string x = tankInfo.substr(0, commaPos);
+                std::string y = tankInfo.substr(commaPos + 1);
+                //convert to int
+                x1Pos = std::stoi(x);
+                y1Pos = std::stoi(y);
+            }
+        }
+        //check if the line starts with tank2:
+        if (line.rfind("tank2:", 0) == 0) {
+            // Parse tank information
+            // If an error occurs, log it
+            std::string tankInfo = line.substr(line.find(":") + 1);
+            size_t commaPos = tankInfo.find(',');
+            if (commaPos != std::string::npos) {
+                std::string x = tankInfo.substr(0, commaPos);
+                std::string y = tankInfo.substr(commaPos + 1);
+                //convert to int
+                x2Pos = std::stoi(x);
+                y2Pos = std::stoi(y);
+            }
+        }
+        if(line.empty()) {
+            break;
+        }
     }
     printf("Width:%d, Height:%d\n", width, height);
+    printf("Tank1 Position: %d, %d\n", x1Pos, y1Pos);
+    printf("Tank2 Position: %d, %d\n", x2Pos, y2Pos);
     return true;
 }
 
