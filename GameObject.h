@@ -1,20 +1,24 @@
 
-#ifndef GameObject_h
-#define GameObject_h
+#pragma once 
+
+#include <vector>
 
 class GameObject
 {
     protected:
-        int id;
+        char id;
+
         std::vector<int> position;
+
         int health;
         
     public:
         //coonstructor
-        GameObject(int id, std::vector<int> position, int health);
+        GameObject(char id, std::vector<int> position, int health);
+        
         //basic functions for every object on the board
         std::vector<int> getTankPosition() {}
+
         int getHealth() {}
 };
 
-#endif
