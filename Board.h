@@ -53,8 +53,7 @@ class Board{
 
            void  manipulate_cords(int& x, int& y) const;
 
-           bool fileloading(const std::string & file );
-
+           
 
 
 };
