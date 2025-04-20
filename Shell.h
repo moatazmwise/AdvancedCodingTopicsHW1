@@ -1,29 +1,29 @@
 #pragma once
-#include <utility>
 
-
-struct Position {
-    int x, y;
-};
+#include <vector>
+#include "Board.h"
 
 class Shell {
 private:
-    Position position;
-    std::pair<int, int> direction;
-    int owner;
+    int ownerid;
+    std::vector<int> position;
+    std::vector<int> direction;
     bool active;
 
 public:
-    Shell(Position start, std::pair<int, int> direction, int owner);
+    Shell(const std::vector<int>& start, const std::vector<int>& direction, int ownerid);
 
-    void Shell::move(int height, int width);
-    std::pair<Position, Position> getPathThisStep() const;
+    std::vector<int> getPosition() const;
+    
+    std::vector<int> getDirection() const;
 
-    Position getPosition() const;
-    std::pair<int, int> getDirection() const;
-    int getOwner() const;
+    int getOwnerid() const;
+
     bool isActive() const;
 
-    void explode();
+    void move(const Board& board);
 
+    std::pair<std::vector<int>, std::vector<int>> getShellpath() const;
+
+    void explode();
 };

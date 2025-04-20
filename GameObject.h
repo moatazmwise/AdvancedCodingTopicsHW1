@@ -7,19 +7,32 @@ class GameObject
 {
 protected:
     char id;
+
     std::vector<int> position;
+    
     int health;
-    int rows;
-    int cols;
+    
 
 public:
-	//default constructor
-    GameObject();
-    //constructor
-    GameObject(char id, std::vector<int> position, int health, int rows, int cols);
 
-    //basic functions for every object on the board
-    std::vector<int> getPosition();
-    int getHealth();
+    GameObject(char id, const std::vector<int> &position, int health); 
+
+    char getId() const;
+
+    std::vector<int> getPosition() const;
+
+    void setPosition(int x, int y);
+
+    int getHealth() const;
+
+    void setHealth(int w);
 };
+
+
+
+
+
+
+
+
 

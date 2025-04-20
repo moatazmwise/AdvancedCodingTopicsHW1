@@ -2,7 +2,7 @@
 
 # include <vector>
 #include <string>
-#include "GameObject.h"
+
 
 
 class Board{
@@ -13,24 +13,42 @@ class Board{
 
            int board_height ;
 
-           std::vector<std::vector<GameObject>> board_matrix;
+           std::vector<std::string> board_matrix;
 
     public:
 
 
-           Board(int width,int height);
+           Board(int width=0,int height=0);
 
-           const GameObject& getCell(int x,int y) const;
+           const char getCell(int x,int y) const;
+
+           void setcell(int x, int y, char obj);
 
            int getwidth() const;
 
            int getheight() const;
 
-           void setcell(GameObject obj , int x, int y);
-
            void  manipulate_cords(int& x, int& y) const;
+
+           void setInputRow(int row, const std::string& inputline);
+
+           bool isWall(int x, int y) const;
+
+           bool isMine(int x, int y) const;
+
+           bool isTank(int x, int y) const;
+
+           bool isSpace(int x, int y) const;
+
+           void Board::printBoard() const;
+
 
            
 
 
 };
+
+
+   
+
+

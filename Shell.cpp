@@ -1,38 +1,46 @@
 #include "Shell.h"
 
+Shell::Shell(const std::vector<int>& start, const std::vector<int>& direction, int ownerid)
+    : position(start), direction(direction), ownerid(ownerid), active(true) {}
 
-Shell::Shell(Position start, std::pair<int, int> direction, int owner)
-    : position(start), direction(direction), owner(owner), active(true) {}
-
-void Shell::move( int height, int width) {
-        if (!active) return;
-        position.x = (position.x + 2 * direction.first + width) % width;
-        position.y = (position.y + 2 * direction.second + height) % height;
+std::vector<int> Shell::getPosition() const {
+        return position;
     }
     
+std::vector<int> Shell::getDirection() const {
+        return direction;
+    }
+    
+int Shell::getOwnerid() const {
+        return ownerid;
+    }
+    
+bool Shell::isActive() const {
+        return active;
+    }
 
+void Shell::move(const Board& board) {
+    if (!active) return;
+    position[0] += 2 * direction[0];
+    position[1] += 2 * direction[1];
 
-std::pair<Position, Position> Shell::getPathThisStep() const {
-    Position first = {
-        (position.x + direction.first),
-        (position.y + direction.second)
-    };
-    Position second = {
-        (position.x + 2 * direction.first),
-        (position.y + 2 * direction.second)
-    };
-    return {first, second};
+    board.manipulate_cords(position[0], position[1]);
 }
 
-Position Shell::getPosition() const { return position; }
+std::pair<std::vector<int>, std::vector<int>> Shell::getShellpath() const {
+    std::vector<int> beginning = position;
+    std::vector<int> finish = {
+        (position[0] + 2 * direction[0]),
+        (position[1] + 2 * direction[1])
+    };
+    return {beginning, finish};
+}
+void Shell::explode() {
+    active = false;
+}
 
-std::pair<int, int> Shell::getDirection() const { return direction; }
 
-int Shell::getOwner() const { return owner; }
 
-bool Shell::isActive() const { return active; }
-
-void Shell::explode() { active = false; }
 
 
 
