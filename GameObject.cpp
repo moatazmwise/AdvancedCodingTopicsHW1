@@ -1,12 +1,7 @@
-#pragma once
 #include "GameObject.h"
 #include <vector>
 
-
-
 GameObject::GameObject(char id, const std::vector<int>& position, int health): id(id), position(position), health(health) {}
-
-
 
 char GameObject::getId() const {
     return id;
@@ -28,6 +23,3 @@ int GameObject::getHealth() const {
 void GameObject::setHealth(int w) {
     health = w;
 }
-
-
-   

@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <array>
 #include<vector>
@@ -9,9 +10,10 @@ class Tank : public GameObject
 {
 private:
 	/* data */
-	int shellcounter;
-	std::vector<int> direction;
 	int playerid;
+	std::vector<int> direction;
+	int shellcounter;
+
 
 public:
 	//tank main functions

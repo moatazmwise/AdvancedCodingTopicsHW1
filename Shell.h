@@ -5,9 +5,9 @@
 
 class Shell {
 private:
-    int ownerid;
     std::vector<int> position;
     std::vector<int> direction;
+    int ownerid;
     bool active;
 
 public:

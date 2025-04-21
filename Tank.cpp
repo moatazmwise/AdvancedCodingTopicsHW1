@@ -2,8 +2,8 @@
 
 	
 	Tank::Tank(int playerid,  const std::vector<int>& position, const std::vector<int>& direction):
-     GameObject(char('0' + playerid), position, 1),
-    direction{direction[0], direction[1]}, playerid(playerid), shellcounter(16) {}
+        GameObject(char('0' + playerid), position, 1),
+        playerid(playerid), direction{direction[0], direction[1]}, shellcounter(16) {}
 
 
 	int Tank::getPlayerid() const{

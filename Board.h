@@ -20,7 +20,7 @@ class Board{
 
            Board(int width=0,int height=0);
 
-           const char getCell(int x,int y) const;
+           char getCell(int x,int y) const;
 
            void setcell(int x, int y, char obj);
 
@@ -40,7 +40,7 @@ class Board{
 
            bool isSpace(int x, int y) const;
 
-           void Board::printBoard() const;
+           void printBoard() const;
 
 
            

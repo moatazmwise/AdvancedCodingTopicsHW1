@@ -161,7 +161,7 @@ int Algorithm::toIndex(int x, int y) const {
     return y * board.getwidth() + x;
 }
 
-int Algorithm::chaserAlgorithm(const Tank& myTank,const Tank& enemyTank,const std::vector<Shell>& shells,const std::vector<std::vector<int>>& mines) {
+int Algorithm::chaserAlgorithm(const Tank& myTank, const Tank& enemyTank, const std::vector<Shell>& shells, const std::vector<std::vector<int>>& mines) {
 
     if (shootCooldown > 0) {
         shootCooldown--;}
@@ -217,7 +217,7 @@ int Algorithm::chaserAlgorithm(const Tank& myTank,const Tank& enemyTank,const st
     return (diff <= 4) ? Rotate_Rigth_1_8 : Rotate_Left_1_8;
 }
 
-int Algorithm::defenderAlgorithm(const Tank& myTank,const Tank& enemyTank,const std::vector<Shell>& shells,const std::vector<std::vector<int>>& mines) {
+int Algorithm::defenderAlgorithm(const Tank& myTank, const Tank& enemyTank, const std::vector<Shell>& shells, const std::vector<std::vector<int>>& mines) {
     if (shellDanger(myTank, shells)) {
 
         return Move_Forward;

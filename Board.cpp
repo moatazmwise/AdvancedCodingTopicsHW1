@@ -1,5 +1,3 @@
-# pragma once
-
 #include<iostream>
 
 #include<fstream>
@@ -8,12 +6,12 @@
 
 
 
-Board::Board(int width=0,int height=0):
+Board::Board(int width,int height):
     board_width(width), board_height(height), board_matrix(width,std::string(height, ' ')) {}
 
 
 
-const char  Board::getCell(int x,int y) const{
+char Board::getCell(int x,int y) const{
     manipulate_cords(x, y);
     return board_matrix[y][x];
 }
