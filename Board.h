@@ -28,9 +28,9 @@ class Board{
 
            int getheight() const;
 
-           void  manipulate_cords(int& x, int& y) const;
+           const std::vector<std::string>& getBoard() const;
 
-           void setInputRow(int row, const std::string& inputline);
+           void  manipulate_cords(int& x, int& y) const;
 
            bool isWall(int x, int y) const;
 

@@ -31,6 +31,10 @@ int Board::getwidth() const{
 int Board::getheight() const{
     return board_height;
 }
+const std::vector<std::string>& Board::getBoard() const {
+    return board_matrix;
+}
+
 
 void  Board::manipulate_cords(int& x, int& y) const{
     if (board_width <= 0 || board_height <= 0) return;
@@ -38,19 +42,6 @@ void  Board::manipulate_cords(int& x, int& y) const{
     y = ((y % board_height) + board_height) % board_height;
 }
 
-void Board::setInputRow(int row, const std::string& inputline){
-
-    if (row < 0 || row >= board_height) return;
-
-    int row_line = static_cast<int>(inputline.size());
-
-    board_matrix[row].assign(inputline.substr(0, std::min(row_line, board_width)));
-
-    if (row_line < board_width) {
-
-        board_matrix[row].append(board_width - row_line, ' ');
-    }
-}
 
 bool Board::isTank(int x, int y) const{
     char c = getCell(x, y);

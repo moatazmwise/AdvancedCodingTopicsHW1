@@ -25,6 +25,11 @@ void Shell::move(const Board& board) {
     position[1] += 2 * direction[1];
 
     board.manipulate_cords(position[0], position[1]);
+
+    if (board.isWall(position[0], position[1])) {
+        
+        explode();  
+    }
 }
 
 std::pair<std::vector<int>, std::vector<int>> Shell::getShellpath() const {
