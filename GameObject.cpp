@@ -1,25 +1,66 @@
 #include "GameObject.h"
-#include <vector>
+#include "GameManager.h"
 
-GameObject::GameObject(char id, const std::vector<int>& position, int health): id(id), position(position), health(health) {}
+GameObject::GameObject(int r, int c, int dR, int dC, int hp, GameManager* gm)
+    : row(r), col(c), dirRow(dR), dirCol(dC), health(hp), manager(gm), symbol('?') {}
 
-char GameObject::getId() const {
-    return id;
+int GameObject::Translate(int amount) {
+    return manager->Translate(this, amount);
 }
 
-std::vector<int> GameObject::getPosition() const {
-    return position;
+void GameObject::RotateClockwise() {
+    int newRow = dirCol;
+    int newCol = -dirRow;
+    dirRow = newRow;
+    dirCol = newCol;
 }
 
-void GameObject::setPosition(int x, int y) {
-    position[0] = x;
-    position[1] = y;
+void GameObject::RotateCounterClockwise() {
+    int newRow = -dirCol;
+    int newCol = dirRow;
+    dirRow = newRow;
+    dirCol = newCol;
 }
 
-int GameObject::getHealth() const {
-    return health;
+void GameObject::Damage(int amount) {
+    health -= amount;
+    if (health <= 0) {
+        manager->Destroy(this);
+    }
 }
 
-void GameObject::setHealth(int w) {
-    health = w;
+Wall::Wall(int r, int c, GameManager* gm) : GameObject(r, c, 0, 0, 1000, gm) {
+    symbol = '#';
+}
+
+std::string Wall::GetType() const {
+    return "Wall";
+}
+
+void Wall::Update() {
+    // To be implemented
+}
+
+Mine::Mine(int r, int c, GameManager* gm) : GameObject(r, c, 0, 0, 1, gm) {
+    symbol = '@';
+}
+
+std::string Mine::GetType() const {
+    return "Mine";
+}
+
+void Mine::Update() {
+    // To be implemented
+}
+
+Shell::Shell(int r, int c, int dR, int dC, GameManager* gm) : GameObject(r, c, dR, dC, 1, gm) {
+    symbol = '*';
+}
+
+std::string Shell::GetType() const {
+    return "Shell";
+}
+
+void Shell::Update() {
+    // To be implemented
 }

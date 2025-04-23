@@ -1,73 +1,47 @@
-#include "Tank.h"
+#include "Tank.h" 
 
-	
-	Tank::Tank(int playerid,  const std::vector<int>& position, const std::vector<int>& direction):
-        GameObject(char('0' + playerid), position, 1),
-        playerid(playerid), direction{direction[0], direction[1]}, shellcounter(16) {}
+Tank::Tank(int r, int c, int dR, int dC, GameManager* gm, char tankSymbol, TankBot* bot)
+    : GameObject(r, c, dR, dC, 100, gm), ammo(10), playerNum(0), shotCooldown(0), isReversing(false), reverseDelay(0), tankBot(bot) {
+    symbol = tankSymbol;
+}
 
+std::string Tank::GetType() const {
+    return "Tank";
+}
 
-	int Tank::getPlayerid() const{
-        return playerid;
-    }
+void Tank::Update() {
+    if (!tankBot) return;
+    std::string action = tankBot->Decide(manager->GetBoard(), playerNum);
 
-    int Tank::getShellcounter() const{
-        return shellcounter;
-    }
+    if (action == "f") MoveForward();
+    else if (action == "b") Reverse();
+    else if (action == "S") Shoot();
+    else if (action == "RC45") Rotate45(true);
+    else if (action == "RC90") Rotate90(true);
+    else if (action == "RCC45") Rotate45(false);
+    else if (action == "RCC90") Rotate90(false);
+}
 
-	std::vector<int> Tank::getDirection() const{
-        return direction;
-    }
+bool Tank::Shoot() {
+    // To be implemented
+    return false;
+}
 
-	
-	void Tank::moveForward(bool forward, const Board& board){
-        int delta_x = direction[0] * (forward ? 1 : -1);
-        int delta_y = direction[1] * (forward ? 1 : -1);
+void Tank::MoveForward() {
+    Translate(1);
+}
 
-        int x = position[0] + delta_x;
-        int y = position[1] + delta_y;
-        board.manipulate_cords(x, y);
-        position = {x, y};
+void Tank::Reverse() {
+    isReversing = true;
+    reverseDelay = 2; // Example delay
+}
 
+void Tank::Rotate45(bool clockwise) {
+    if (clockwise) RotateClockwise();
+    else RotateCounterClockwise();
+}
 
-    }
-
-	void Tank::turn(const std::string& orientation, int degrees){
-
-        bool right = (orientation == "right");
-    int& x = direction[0];
-    int& y = direction[1];
-
-    if (degrees == 90) {
-        int x1 = right ? -y : y;
-        y = right ? x : -x;
-        x = x1;}
-    else if (degrees == 45) {
-        if (x == 0 || y == 0) {
-            int x1 = (x != 0) ? x : (right ? -y : y);
-            int y1 = (y != 0) ? y : (right ? x : -x);
-            x = x1;
-            y = y1;}
-         else {
-            int x1 = right ? (y > 0 ? 1 : -1) : (y > 0 ? -1 : 1);
-            int y1 = right ? (x < 0 ? 1 : -1) : (x < 0 ? -1 : 1);
-            x = x1;
-            y = y1;
-        }}
-    else {
-        // Invalid rotation angle; no change
-    }
-
-    
-    }
-    
-
-	bool Tank::shoot(){
-        if (shellcounter > 0) {
-            --shellcounter;
-            return true;
-        }
-        return false;
-    }
-
-	
-
+void Tank::Rotate90(bool clockwise) {
+    Rotate45(clockwise);
+    Rotate45(clockwise);
+}

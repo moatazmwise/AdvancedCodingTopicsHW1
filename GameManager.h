@@ -1,41 +1,28 @@
 #pragma once
-
-#include <vector>
-#include <iostream>
+#include "GameObject.h"
 #include "Tank.h"
-#include "Board.h"
-#include "Algorithm.h"
-#include "Shell.h"
-
-// External globals from main parsing file
-extern std::vector<std::vector<char>> board;
-extern int x1Pos, y1Pos, x2Pos, y2Pos;
-extern int width, height;
+#include "TankBot.h"
+#include <vector>
 
 class GameManager {
 private:
-    Board boardModel;
-    Tank tank1;
-    Tank tank2;
-    Algorithm* algorithm1;
-    Algorithm* algorithm2;
-    std::vector<Shell> shells;
-    int stepCount;
-    bool gameOver;
-
-    void logBadStep(Tank* tank, int action);
-    void processShells();
-    bool executeAction(Tank* tank, int action);
+    int rows;
+    int cols;
+    std::vector<std::vector<GameObject*>> board;
 
 public:
-    GameManager();
-    void initializePlayers();
-    void runGameLoop();
-    bool checkGameOver() const;
-    void displayBoard() const;
-    void moveTankForward(Tank* tank, bool forward);
-    void handleShooting(Tank* tank);
+    void InitGame(int r, int c, std::vector<std::vector<char>> boardInput);
+    void GameLoop();
+    int Translate(GameObject* obj, int amount);
+    void Explode(int r, int c, int radius);
+    void Destroy(GameObject* obj);
+    GameObject* GetGameObject(int r, int c);
+    const std::vector<std::vector<GameObject*>>& GetBoard() const;
+
+    template<typename T>
+    T* Instantiate(int r, int c);
+    template<typename T>
+    T* Instantiate(int r, int c, int dR, int dC, int playerNum, TankBot* bot);
+
+    friend class GameObject; // Allow GameObject to call Destroy
 };
-
-
-

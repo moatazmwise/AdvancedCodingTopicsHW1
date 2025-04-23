@@ -1,39 +1,25 @@
 #pragma once
-#include <string>
-#include <array>
-#include<vector>
 #include "GameObject.h"
-#include"Board.h"
+#include "GameManager.h"
+#include "TankBot.h"
 
-using namespace std;
-class Tank : public GameObject
-{
+class Tank : public GameObject {
 private:
-	/* data */
-	int playerid;
-	std::vector<int> direction;
-	int shellcounter;
-
+	int ammo;
+	int playerNum;
+	int shotCooldown;
+	bool isReversing;
+	int reverseDelay;
+	TankBot* tankBot;
 
 public:
-	//tank main functions
-	Tank(int playerid, const std::vector<int>& position, const std::vector<int>& direction);
+	Tank(int r, int c, int dR, int dC, GameManager* gm, char tankSymbol, TankBot* bot);
+	std::string GetType() const override;
+	void Update() override;
 
-	int getPlayerid() const;
-
-    int getShellcounter() const;
-
-	std::vector<int> getDirection() const;
-
-	
-	void moveForward(bool forward, const Board& board);
-
-	void turn(const std::string& orientation, int degrees);
-
-	bool shoot();
-
-	
+	bool Shoot();
+	void MoveForward();
+	void Reverse();
+	void Rotate45(bool clockwise);
+	void Rotate90(bool clockwise);
 };
-
-
-

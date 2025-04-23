@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -166,8 +165,8 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    game_manager.initializePlayers();  // Load algorithms, setup state, etc.
-    game_manager.runGameLoop();        // Main game loop
+    game_manager.InitGame(width, height, board);  // Load algorithms, setup state, etc.
+    game_manager.GameLoop();        // Main game loop
 
     return 0;
 }
