@@ -89,10 +89,7 @@ GameObject* GameManager::GetGameObject(int r, int c) {
 template<typename T>
 T* GameManager::Instantiate(int r, int c) {
     if (r < 0 || r >= rows || c < 0 || c >= cols || board[r][c] != nullptr) return nullptr;
-    T* obj = new T();
-    obj->row = r;
-    obj->col = c;
-    obj->manager = this;
+    T* obj = new T(r, c, this);
     board[r][c] = obj;
     return obj;
 }
@@ -100,14 +97,7 @@ T* GameManager::Instantiate(int r, int c) {
 template<typename T>
 T* GameManager::Instantiate(int r, int c, int dR, int dC, int playerNum, TankBot* bot) {
     if (r < 0 || r >= rows || c < 0 || c >= cols || board[r][c] != nullptr) return nullptr;
-    T* obj = new T();
-    obj->row = r;
-    obj->col = c;
-    obj->dirRow = dR;
-    obj->dirCol = dC;
-    obj->playerNum = playerNum;
-    obj->tankBot = bot;
-    obj->manager = this;
+    T* obj = new T(r , c, dR, dC, this, playerNum, bot);
     obj->symbol = char(playerNum);
     board[r][c] = obj;
     return obj;
