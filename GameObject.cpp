@@ -18,18 +18,16 @@ void GameObject::ResetUpdated() {
 
 void GameObject::RotateClockwise() {
     //TODO: change for 45 degrees
-    int newRow = dirCol;
-    int newCol = -dirRow;
-    dirRow = newRow;
-    dirCol = newCol;
+    auto[newdirCol, newdirRow] = rotate_clockwise[3*dirRow + dirCol + 4];
+    dirRow = newdirRow;
+    dirCol = newdirCol;
 }
 
 void GameObject::RotateCounterClockwise() {
     //TODO: change for 45 degrees
-    int newRow = -dirCol;
-    int newCol = dirRow;
-    dirRow = newRow;
-    dirCol = newCol;
+    auto[newdirCol, newdirRow] = rotate_clockwise[3*dirCol + dirRow + 4];
+    dirCol= newdirRow;
+    dirRow = newdirCol;
 }
 
 void GameObject::Damage(int amount) {

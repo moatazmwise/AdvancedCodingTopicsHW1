@@ -14,6 +14,18 @@ private:
     int health;
     bool updated = true;
 
+    std::vector<std::pair<int, int>> rotate_clockwise = {
+        {-1,  0}, // index 0 = input (-1, -1) 
+        {-1, -1}, // index 1 = input ( 0, -1)
+        { 0, -1}, // index 2 = input ( 1, -1)
+        {-1,  1}, // index 3 = input (-1,  0)
+        { 0,  0}, // index 4 = input ( 0,  0)
+        { 1, -1}, // index 5 = input ( 1,  0)
+        { 0,  1}, // index 6 = input (-1,  1)
+        { 1,  1}, // index 7 = input ( 0,  1)
+        { 1,  0}  // index 8 = input ( 1,  1)
+    };
+
 protected:
     GameManager* manager;
     char symbol;

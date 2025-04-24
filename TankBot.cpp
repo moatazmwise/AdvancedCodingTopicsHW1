@@ -5,7 +5,7 @@ std::string AggressiveBot::Decide(const std::vector<std::vector<GameObject*>>& b
     (void)playerNum; // Suppress unused variable warning
     (void)board; // Suppress unused parameter warning
     // Implement aggressive strategy here
-    return "S"; // Move forward as an example
+    return "f"; // Move forward as an example
 }
 
 std::string DefensiveBot::Decide(const std::vector<std::vector<GameObject*>>& board, int playerNum) {
@@ -13,7 +13,7 @@ std::string DefensiveBot::Decide(const std::vector<std::vector<GameObject*>>& bo
     (void)playerNum; // Suppress unused variable warning
     (void)board; // Suppress unused parameter warning
     // Implement defensive strategy here
-    return "b"; // Move backward as an example
+    return "RC45"; // Move backward as an example
 }
 
 /*
