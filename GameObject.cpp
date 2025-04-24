@@ -8,7 +8,16 @@ int GameObject::Translate(int amount) {
     return manager->Translate(this, amount);
 }
 
+void GameObject::Update() {
+    updated = true;
+}
+
+void GameObject::ResetUpdated() {
+    updated = false;
+}
+
 void GameObject::RotateClockwise() {
+    //TODO: change for 45 degrees
     int newRow = dirCol;
     int newCol = -dirRow;
     dirRow = newRow;
@@ -16,6 +25,7 @@ void GameObject::RotateClockwise() {
 }
 
 void GameObject::RotateCounterClockwise() {
+    //TODO: change for 45 degrees
     int newRow = -dirCol;
     int newCol = dirRow;
     dirRow = newRow;
@@ -29,28 +39,28 @@ void GameObject::Damage(int amount) {
     }
 }
 
-Wall::Wall(int r, int c, GameManager* gm) : GameObject(r, c, 0, 0, 1000, gm) {
+Wall::Wall(int r, int c, int dR, int dC, GameManager* gm) : GameObject(r, c, dR, dC, 2, gm) {
     symbol = '#';
 }
 
 std::string Wall::GetType() const {
-    return "Wall";
+    return "wall";
 }
 
 void Wall::Update() {
-    // To be implemented
+    GameObject::Update();
 }
 
-Mine::Mine(int r, int c, GameManager* gm) : GameObject(r, c, 0, 0, 1, gm) {
+Mine::Mine(int r, int c, int dR, int dC, GameManager* gm) : GameObject(r, c, dR, dC, 1, gm) {
     symbol = '@';
 }
 
 std::string Mine::GetType() const {
-    return "Mine";
+    return "mine";
 }
 
 void Mine::Update() {
-    // To be implemented
+    GameObject::Update();
 }
 
 Shell::Shell(int r, int c, int dR, int dC, GameManager* gm) : GameObject(r, c, dR, dC, 1, gm) {
@@ -58,9 +68,44 @@ Shell::Shell(int r, int c, int dR, int dC, GameManager* gm) : GameObject(r, c, d
 }
 
 std::string Shell::GetType() const {
-    return "Shell";
+    return "shell";
 }
 
 void Shell::Update() {
-    // To be implemented
+    GameObject::Update();
+    for (int i = 0; i < 2; ++i) {
+        int m = Translate(1);
+        bool isMine = false;
+        if (m == 0){
+            //check if the tile in front of the shell is a mine
+            GameObject* obj = manager->GetGameObject(GetRow(), GetCol(), GetDirRow(), GetDirCol());
+            isMine = (obj != nullptr && obj->GetType() == "mine");
+            if (isMine) {
+                manager->Destroy(obj);
+                m = Translate(1);
+            }
+        }
+
+        if (m == 0) {
+            //damage the object in front of the shell
+            GameObject* obj = manager->GetGameObject(GetRow(), GetCol(), GetDirRow(), GetDirCol());
+            obj->Damage(1);
+            Damage(1);
+        }
+
+        if (isOverMine) {
+            //restore previous mine
+            if (m == 0) {
+                manager->Instantiate<Mine>(GetRow(), GetCol(), 0, 0);
+            } else {
+                manager->Instantiate<Mine>(GetRow(), GetCol(), 0, 0, -GetDirRow(), -GetDirCol());
+            }
+        }
+
+        isOverMine = isMine;
+
+        if (m == 0) {
+            return; // if the shell is destroyed exit
+        }
+    }
 }

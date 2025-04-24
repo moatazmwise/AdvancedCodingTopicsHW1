@@ -7,15 +7,14 @@
 std::string filename = "input_errors.txt"; // error file name
 
 //tanks positions
-int x1Pos = 0; // tank1 x position
-int y1Pos = 0; // tank1 y position
-int x2Pos = 0; // tank2 x position
-int y2Pos = 0; // tank2 y position
-//initial board
-std::vector<std::vector<char>> board;
-// board dimensions
-int width = 0; // board width
-int height = 0; // board height
+int x1Pos = 0; // tank1 x
+int y1Pos = 0; // tank1 y
+int x2Pos = 0; // tank2 x
+int y2Pos = 0; // tank2 y
+
+std::vector<std::vector<char>> board; // game board
+int width = 0; // width
+int height = 0; // height
 
 void log_error(const std::string& message) {
     std::ofstream file(filename, std::ios::app);  // append mode
@@ -47,6 +46,10 @@ bool read_input_file(const std::string& filePath) {
             // Check if width and height are valid
             if (width <= 0 || height <= 0) {
                 log_error("Invalid dimensions in input file: " + dims);
+                return false;
+            }
+            if (width <= 1 && height <= 1) {
+                log_error("Dimentions are too small: " + dims);
                 return false;
             }
             // Initialize the board with the given dimensions
@@ -93,6 +96,10 @@ bool read_input_file(const std::string& filePath) {
                 log_error("Number of rows in the board exceeds expected height. Expected: " + std::to_string(height) + ", but got: " + std::to_string(i));
                 break; // Stop processing if we exceed the expected height
             }
+            if (line[0]!= '~'){
+                continue;; //not a board line
+            }
+            line = line.substr(1);
             for (char c : line)
             {
                 if (j+1 > width) {
@@ -139,16 +146,6 @@ bool read_input_file(const std::string& filePath) {
         }
     }
 
-    printf("Width:%d, Height:%d\n", width, height);
-    printf("Tank1 Position: %d, %d\n", x1Pos, y1Pos);
-    printf("Tank2 Position: %d, %d\n", x2Pos, y2Pos);
-    // Print the board
-    for (const auto& row : board) {
-        for (const auto& cell : row) {
-            std::cout << cell;
-        }
-        std::cout << std::endl;
-    }
     return true;
 }
 
@@ -164,9 +161,22 @@ int main(int argc, char* argv[]) {
     if (!read_input_file(inputFilePath)) {
         return 1;
     }
+    //put the tanks in the board
+    if (x1Pos >= 0 && x1Pos < height && y1Pos >= 0 && y1Pos < width) {
+        board[x1Pos][y1Pos] = '1'; // Tank1
+    } else {
+        log_error("Tank1 position is out of bounds: (" + std::to_string(x1Pos) + ", " + std::to_string(y1Pos) + ")");
+        board[0][0] = '1';
+    }
+    if (x2Pos >= 0 && x2Pos < height && y2Pos >= 0 && y2Pos < width) {
+        board[x2Pos][y2Pos] = '2'; // Tank2
+    } else {
+        log_error("Tank2 position is out of bounds: (" + std::to_string(x2Pos) + ", " + std::to_string(y2Pos) + ")");
+        board[height-1][width-1] = '2';
+    }
 
-    game_manager.InitGame(width, height, board);  // Load algorithms, setup state, etc.
-    game_manager.GameLoop();        // Main game loop
+    game_manager.InitGame(width, height, board); // Initialize the game with the board
+    game_manager.GameLoop(); // Main game loop
 
     return 0;
 }

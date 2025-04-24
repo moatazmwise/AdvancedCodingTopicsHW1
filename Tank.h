@@ -1,6 +1,5 @@
 #pragma once
 #include "GameObject.h"
-#include "GameManager.h"
 #include "TankBot.h"
 
 class Tank : public GameObject {
@@ -9,17 +8,22 @@ private:
 	int playerNum;
 	int shotCooldown;
 	bool isReversing;
+	bool initReverse;
 	int reverseDelay;
 	TankBot* tankBot;
 
 public:
-	Tank(int r, int c, int dR, int dC, GameManager* gm, char tankSymbol, TankBot* bot);
+	Tank(int r, int c, int dR, int dC, GameManager* gm, char tankSymbol = 'T', TankBot* bot = nullptr);
 	std::string GetType() const override;
 	void Update() override;
 
 	bool Shoot();
 	void MoveForward();
 	void Reverse();
+	void ReverseRequest();
 	void Rotate45(bool clockwise);
 	void Rotate90(bool clockwise);
+
+	void SetPlayerNum(int num) { playerNum = num; }
+	void SetTankBot(TankBot* bot) { tankBot = bot; }
 };

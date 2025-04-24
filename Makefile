@@ -6,8 +6,12 @@ CXXFLAGS = -std=c++20 -Wall -Wextra -g
 TARGET = tanks_game
 
 # Source files
-SRCS = tanks_game.cpp Tank.cpp GameManager.cpp GameObject.cpp Algorithm.cpp Board.cpp Shell.cpp
-
+SRCS = tanks_game.cpp \
+	   Tank.cpp \
+	   GameManager.cpp \
+	   GameObject.cpp \
+	   TankBot.cpp
+	   
 # Object files
 OBJS = $(SRCS:.cpp=.o)
 

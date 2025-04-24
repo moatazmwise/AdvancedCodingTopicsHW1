@@ -12,6 +12,7 @@ private:
     int dirRow; // -1, 0, 1
     int dirCol; // -1, 0, 1
     int health;
+    bool updated = true;
 
 protected:
     GameManager* manager;
@@ -21,7 +22,8 @@ public:
     GameObject(int r, int c, int dR, int dC, int hp, GameManager* gm);
 
     virtual std::string GetType() const = 0;
-    virtual void Update() = 0;
+    virtual void Update();
+    void ResetUpdated();
     int Translate(int amount);
     void RotateClockwise();
     void RotateCounterClockwise();
@@ -33,27 +35,31 @@ public:
     int GetDirCol() const { return dirCol; }
     int GetHealth() const { return health; }
     char GetSymbol() const { return symbol; }
+    bool IsUpdated() const { return updated; }
 
     friend class GameManager;
 };
 
 class Wall : public GameObject {
 public:
-    Wall(int r, int c, GameManager* gm);
+    Wall(int r, int c, int dR, int dC, GameManager* gm);
     std::string GetType() const override;
-    void Update() override;
+    void Update();
 };
 
 class Mine : public GameObject {
 public:
-    Mine(int r, int c, GameManager* gm);
+    Mine(int r, int c, int dR, int dC, GameManager* gm);
     std::string GetType() const override;
-    void Update() override;
+    void Update();
 };
 
 class Shell : public GameObject {
+private:
+    bool isOverMine = false;
 public:
     Shell(int r, int c, int dR, int dC, GameManager* gm);
     std::string GetType() const override;
-    void Update() override;
+    void Update();
+    void SetOverMine(bool overMine) { isOverMine = overMine; }
 };

@@ -1,5 +1,7 @@
 #include "GameManager.h"
 #include <iostream>
+#include <thread>
+#include <chrono>
 
 void GameManager::InitGame(int r, int c, std::vector<std::vector<char>> boardInput) {
     rows = r;
@@ -13,27 +15,94 @@ void GameManager::InitGame(int r, int c, std::vector<std::vector<char>> boardInp
             } else if (c == '@') {
                 Instantiate<Mine>(i, j);
             } else if (c == '1') {
-                Instantiate<Tank>(i, j, 0, 1, '1', new AggressiveBot());
+                player1 = Instantiate<Tank>(i, j, 0, 1);
+                player1->SetPlayerNum(1);
+                player1->ResetUpdated();
+                player1->SetTankBot(new AggressiveBot());
+                player1->symbol = '1';
             } else if (c == '2') {
-                Instantiate<Tank>(i, j, 0, -1, '2', new DefensiveBot());
+                player2 = Instantiate<Tank>(i, j, 0, -1);
+                player2->SetPlayerNum(2);
+                player2->ResetUpdated();
+                player2->SetTankBot(new DefensiveBot());
+                player2->symbol = '2';
             } else if (c == ' ') {
                 // Empty space, do nothing
             }
         }
     }
+    
 }
 
 void GameManager::GameLoop(){
-    // Placeholder game loop
-    while (true) {
+    // Main game loop
+    int k = 0;
+    while (true) { 
+        PrintBoard();
+
+        // Update all game objects
+        player1->Update();
+        player2->Update();
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < cols; ++j) {
-                if (board[i][j]) {
+                if (board[i][j] && !board[i][j]->IsUpdated()) {
                     board[i][j]->Update();
                 }
             }
         }
-        // Handle other game logic here...
+        // Clear the updated flag for the next iteration
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (board[i][j]) {
+                    board[i][j]->ResetUpdated();
+                }
+            }
+        }
+        // wait for user input or a timer then clear the screen
+        std::cout << k;
+        std::this_thread::sleep_for(std::chrono::seconds(refreshRate/1000));
+        std::cout << "\033[2J\033[H";
+        #ifdef _WIN32
+            system("cls"); // Clear console on Windows
+        #else
+            std::cout << "\033[2J\033[H"; // Clear console on Linux/macOS
+        #endif
+        k++;
+        
+        if (EndGame()) {
+            break; // Exit the loop if game over
+        }
+    }
+}
+
+bool GameManager::EndGame(){
+     // Check for game over conditions
+     if (player1->GetHealth() <= 0 && player2->GetHealth() <= 0) {
+        std::cout << "Both players are destroyed. Game Over!" << std::endl;
+        return true;
+    } else if (player1->GetHealth() <= 0) {
+        std::cout << "Player 2 wins!" << std::endl;
+        return true;
+    } else if (player2->GetHealth() <= 0) {
+        std::cout << "Player 1 wins!" << std::endl;
+        return true;
+    }
+    return false;
+}
+
+void GameManager::PrintBoard() const {
+    //print the board with symbols and one space between each symbol
+    for (int i = 0; i < rows; ++i) {
+        std::cout << " "; 
+        for (int j = 0; j < cols; ++j) {
+            if (board[i][j] != nullptr) {
+                std::cout << board[i][j]->GetSymbol() << " ";
+            } else {
+                std::cout << "  "; 
+            }
+        }
+        std::cout << std::endl;
+        std::cout << std::endl; // Extra space between rows
     }
 }
 
@@ -61,18 +130,6 @@ int GameManager::Translate(GameObject* obj, int amount) {
     return moved;
 }
 
-void GameManager::Explode(int r, int c, int radius) {
-    for (int i = r - radius; i <= r + radius; ++i) {
-        for (int j = c - radius; j <= c + radius; ++j) {
-            int wrappedI = (i + rows) % rows;
-            int wrappedJ = (j + cols) % cols;
-            if (board[wrappedI][wrappedJ]) {
-                board[wrappedI][wrappedJ]->Damage(10); // Arbitrary damage value
-            }
-        }
-    }
-}
-
 void GameManager::Destroy(GameObject* obj) {
     int r = obj->row;
     int c = obj->col;
@@ -81,26 +138,10 @@ void GameManager::Destroy(GameObject* obj) {
     }
 }
 
-GameObject* GameManager::GetGameObject(int r, int c) {
-    if (r < 0 || r >= rows || c < 0 || c >= cols) return nullptr;
+GameObject* GameManager::GetGameObject(int r, int c, int offsetR, int offsetC) {
+    r = (r + offsetR + rows) % rows;
+    c = (c + offsetC + cols) % cols;
     return board[r][c];
-}
-
-template<typename T>
-T* GameManager::Instantiate(int r, int c) {
-    if (r < 0 || r >= rows || c < 0 || c >= cols || board[r][c] != nullptr) return nullptr;
-    T* obj = new T(r, c, this);
-    board[r][c] = obj;
-    return obj;
-}
-
-template<typename T>
-T* GameManager::Instantiate(int r, int c, int dR, int dC, int playerNum, TankBot* bot) {
-    if (r < 0 || r >= rows || c < 0 || c >= cols || board[r][c] != nullptr) return nullptr;
-    T* obj = new T(r , c, dR, dC, this, playerNum, bot);
-    obj->symbol = char(playerNum);
-    board[r][c] = obj;
-    return obj;
 }
 
 const std::vector<std::vector<GameObject*>>& GameManager::GetBoard() const {

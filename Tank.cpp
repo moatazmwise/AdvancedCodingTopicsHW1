@@ -1,42 +1,110 @@
-#include "Tank.h" 
+#include "Tank.h"
+#include "GameManager.h"
 
 Tank::Tank(int r, int c, int dR, int dC, GameManager* gm, char tankSymbol, TankBot* bot)
-    : GameObject(r, c, dR, dC, 100, gm), ammo(10), playerNum(0), shotCooldown(0), isReversing(false), reverseDelay(0), tankBot(bot) {
+    : GameObject(r, c, dR, dC, 1, gm), ammo(16), playerNum(0), shotCooldown(0), isReversing(false), reverseDelay(0), tankBot(bot) {
     symbol = tankSymbol;
 }
 
 std::string Tank::GetType() const {
-    return "Tank";
+    return "tank";
 }
 
 void Tank::Update() {
+    GameObject::Update();
+    if (shotCooldown > 0) {
+        shotCooldown--;
+    }
+    if (initReverse && reverseDelay > 0) {
+        reverseDelay--;
+    }
+
     if (!tankBot) return;
     std::string action = tankBot->Decide(manager->GetBoard(), playerNum);
 
+    
     if (action == "f") MoveForward();
-    else if (action == "b") Reverse();
-    else if (action == "S") Shoot();
-    else if (action == "RC45") Rotate45(true);
-    else if (action == "RC90") Rotate90(true);
-    else if (action == "RCC45") Rotate45(false);
-    else if (action == "RCC90") Rotate90(false);
+    if (!initReverse) {
+        if (action == "b") ReverseRequest();
+        else if (action == "S") Shoot();
+        else if (action == "RC45") Rotate45(true);
+        else if (action == "RC90") Rotate90(true);
+        else if (action == "RCC45") Rotate45(false);
+        else if (action == "RCC90") Rotate90(false);
+    }
 }
 
 bool Tank::Shoot() {
-    // To be implemented
+    isReversing = false;
+    if (shotCooldown > 0) return false;
+    if (ammo > 0) {
+        //check if the tile in front of the tank is empty
+        GameObject* obj = manager->GetGameObject(GetRow(), GetCol(), GetDirRow(), GetDirCol());
+        if (obj == nullptr) {
+            // instantiate a shell in front of the tank
+            manager->Instantiate<Shell>(GetRow(), GetCol(), GetDirRow(), GetDirCol(), GetDirRow(), GetDirCol());
+        } else if (obj->GetType() == "mine") {
+            // replace the mine with a shell
+            manager->Destroy(obj);
+            Shell* shell = manager->Instantiate<Shell>(GetRow(), GetCol(), GetDirRow(), GetDirCol(), GetDirRow(), GetDirCol());
+            shell->SetOverMine(true);
+        } else {
+            //damage the object in front of the tank without instantiating a shell
+            obj->Damage(1);
+        }
+        ammo--;
+        shotCooldown = 5;
+        return true;
+    }
     return false;
 }
 
 void Tank::MoveForward() {
-    Translate(1);
+    isReversing = false;
+    if (initReverse) {
+        initReverse = false; // Stop reversing when moving forward
+        return;
+    }
+    if (Translate(1) == 0){
+        // Check for collision with other objects
+        GameObject* obj = manager->GetGameObject(GetRow(), GetCol(), GetDirRow(), GetDirCol());
+        std::string objType = obj->GetType();
+        if (objType == "mine" || objType == "shell" || objType == "tank") {
+            obj->Damage(1); // Damage the object in front
+            Damage(1); // Damage the tank itself
+        }
+    }
+}
+
+void Tank::ReverseRequest() {
+    if (!initReverse && !isReversing) {
+        initReverse = true;
+        reverseDelay = 3;
+    }
+    if (isReversing){
+        Reverse();
+    }
+    if (initReverse && reverseDelay == 0) {
+        initReverse = false;
+        isReversing = true;
+        Reverse();
+    }
+
 }
 
 void Tank::Reverse() {
-    isReversing = true;
-    reverseDelay = 2; // Example delay
+    if(Translate(-1) == 0) {
+        // Check for collision with other objects
+        GameObject* obj = manager->GetGameObject(GetRow(), GetCol(), -GetDirRow(), -GetDirCol());
+        std::string objType = obj->GetType();
+        if (objType == "mine" || objType == "shell" || objType == "tank") {
+            obj->Damage(1); // Damage the object in front
+            Damage(1); // Damage the tank itself
+        }
+    }
 }
-
 void Tank::Rotate45(bool clockwise) {
+    isReversing = false;
     if (clockwise) RotateClockwise();
     else RotateCounterClockwise();
 }
