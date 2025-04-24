@@ -40,6 +40,7 @@ public:
     void RotateClockwise();
     void RotateCounterClockwise();
     void Damage(int amount);
+    void logMove(const std::string& action) const;
 
     int GetRow() const { return row; }
     int GetCol() const { return col; }

@@ -36,10 +36,15 @@ void GameManager::InitGame(int r, int c, std::vector<std::vector<char>> boardInp
 
 void GameManager::GameLoop(){
     // Main game loop
-    int k = 0;
+    int noAmmo = 0;
+    int turn = 0;
     while (true) { 
         PrintBoard();
 
+        // check if both tamks ran out of ammo if so end the game after 40 turns
+        if (player1->GetAmmo() <= 0 && player2->GetAmmo() <= 0) {
+            noAmmo++;
+        }
         // Update all game objects
         player1->Update();
         player2->Update();
@@ -59,7 +64,7 @@ void GameManager::GameLoop(){
             }
         }
         // wait for user input or a timer then clear the screen
-        std::cout << k;
+        std::cout << turn;
         std::this_thread::sleep_for(std::chrono::seconds(refreshRate/1000));
         std::cout << "\033[2J\033[H";
         #ifdef _WIN32
@@ -67,9 +72,9 @@ void GameManager::GameLoop(){
         #else
             std::cout << "\033[2J\033[H"; // Clear console on Linux/macOS
         #endif
-        k++;
+        turn++;
         
-        if (EndGame()) {
+        if (EndGame() || noAmmo >= 40) {
             break; // Exit the loop if game over
         }
     }
