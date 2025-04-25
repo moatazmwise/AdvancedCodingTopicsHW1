@@ -20,9 +20,9 @@ std::string AggressiveBot::Decide(const std::vector<std::vector<GameObject*>>& b
     Tank* selfTank = nullptr;
     Tank* enemyTank = nullptr;
     
-    for (int i = 0; i < board.size(); ++i) {
+    for (auto i = 0u; i < board.size(); ++i) {
 
-        for (int j = 0; j < board[i].size(); ++j) {
+        for (auto j = 0u; j < board[i].size(); ++j) {
 
             GameObject* obj = board[i][j];
 
@@ -182,9 +182,9 @@ std::string AggressiveBot::Decide(const std::vector<std::vector<GameObject*>>& b
 std::string DefensiveBot::Decide(const std::vector<std::vector<GameObject*>>& board, int playerNum) {
     Tank* selfTank = nullptr;
     
-    for (int i = 0; i < board.size(); ++i) {
+    for (auto i = 0u; i < board.size(); ++i) {
 
-        for (int j = 0; j < board[i].size(); ++j) {
+        for (auto j = 0u; j < board[i].size(); ++j) {
 
             GameObject* obj = board[i][j];
             if (obj && obj->GetType() == "tank") {
