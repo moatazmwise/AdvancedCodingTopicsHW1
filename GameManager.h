@@ -21,8 +21,6 @@ public:
     void Destroy(GameObject* obj);
     GameObject* GetGameObject(int r, int c, int offsetR = 0, int offsetC = 0);
     const std::vector<std::vector<GameObject*>>& GetBoard() const;
-    Tank* GetPlayerTank(int playerNum) const;
-    
 
     template<typename T>
     T* Instantiate(int r, int c, int dR = 0, int dC = 0, int offsetR = 0, int offsetC = 0) {
@@ -40,5 +38,4 @@ public:
     }
     
     friend class GameObject; // Allow GameObject to call Destroy
-    
 };
