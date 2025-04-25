@@ -94,6 +94,10 @@ bool GameManager::EndGame(){
     }
     return false;
 }
+Tank* GameManager::GetPlayerTank(int playerNum) const {
+    return (playerNum == 1 ? player1 : player2);
+}
+
 
 void GameManager::PrintBoard() const {
     //print the board with symbols and one space between each symbol
@@ -152,3 +156,5 @@ GameObject* GameManager::GetGameObject(int r, int c, int offsetR, int offsetC) {
 const std::vector<std::vector<GameObject*>>& GameManager::GetBoard() const {
     return board;
 }
+// In GameManager.h
+
