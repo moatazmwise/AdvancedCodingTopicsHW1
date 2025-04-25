@@ -28,5 +28,6 @@ public:
 
 	int GetAmmo() const { return ammo; }
 	void SetPlayerNum(int num) { playerNum = num; }
+	int GetPlayerNum() const { return playerNum; }
 	void SetTankBot(TankBot* bot) { tankBot = bot; }
 };
