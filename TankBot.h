@@ -5,6 +5,7 @@
 class GameManager;
 class GameObject;
 
+// Abstract base for tank AI bots
 class TankBot {
 public:
     virtual ~TankBot() = default;
