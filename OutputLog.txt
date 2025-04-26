@@ -1,0 +1,414 @@
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 90 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 90 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 90 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward

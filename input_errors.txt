@@ -7,3 +7,5 @@ Row 5 is not full. Expected width: 10, but got: 6
 Row 5 is not full. Expected width: 10, but got: 6
 Row 5 is not full. Expected width: 10, but got: 6
 Row 5 is not full. Expected width: 10, but got: 6
+Row 4 is not full. Expected width: 10, but got: 8
+Row 4 is not full. Expected width: 10, but got: 8

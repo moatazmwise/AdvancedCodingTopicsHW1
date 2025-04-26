@@ -10,7 +10,7 @@ std::string Tank::GetType() const {
     return "tank";
 }
 
-void Tank::Update() {
+void Tank::Update(int turnNum) {
     GameObject::Update();
     if (shotCooldown > 0) {
         shotCooldown--;
@@ -20,7 +20,7 @@ void Tank::Update() {
     }
 
     if (!tankBot) return;
-    std::string action = tankBot->Decide(manager->GetBoard(), playerNum);
+    std::string action = tankBot->Decide(manager->GetBoard(), playerNum, turnNum);
 
     
     if (action == "f") MoveForward();

@@ -8,7 +8,7 @@ int GameObject::Translate(int amount) {
     return manager->Translate(this, amount);
 }
 
-void GameObject::Update() {
+void GameObject::Update(int turnNum) {
     updated = true;
 }
 
@@ -43,7 +43,7 @@ std::string Wall::GetType() const {
     return "wall";
 }
 
-void Wall::Update() {
+void Wall::Update(int turnNum) {
     GameObject::Update();
 }
 
@@ -55,7 +55,7 @@ std::string Mine::GetType() const {
     return "mine";
 }
 
-void Mine::Update() {
+void Mine::Update(int turnNum) {
     GameObject::Update();
 }
 
@@ -67,7 +67,7 @@ std::string Shell::GetType() const {
     return "shell";
 }
 
-void Shell::Update() {
+void Shell::Update(int turnNum) {
     GameObject::Update();
     for (int i = 0; i < 2; ++i) {
         int m = Translate(1);

@@ -45,12 +45,12 @@ void GameManager::GameLoop(){
             noAmmo++;
         }
         // Update all game objects
-        player1->Update();
-        player2->Update();
+        player1->Update(turnNum);
+        player2->Update(turnNum);
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < cols; ++j) {
                 if (board[i][j] && !board[i][j]->IsUpdated()) {
-                    board[i][j]->Update();
+                    board[i][j]->Update(turnNum);
                 }
             }
         }

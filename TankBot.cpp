@@ -5,6 +5,26 @@
 #include <algorithm>
 #include <unordered_map>
 
+struct pair_hash {
+    std::size_t operator()(const std::pair<int, int> &p) const {
+        return std::hash<int>()(p.first) ^ (std::hash<int>()(p.second) << 1);
+    }
+};
+
+// functions prototypes
+void FindPathToEnemyTankBFS(const std::vector<std::vector<GameObject *>> &board, std::vector<std::pair<int, int>> &path, Tank *myTank, Tank *enemyTank);
+void FindObjects(
+    const std::vector<std::vector<GameObject *>> &board,
+    std::vector<GameObject *> &mines,
+    std::vector<GameObject *> &shells,
+    std::vector<GameObject *> &tanks);
+
+std::string RunFromShells(const std::vector<std::vector<GameObject *>> &board, Tank *tank, const std::vector<GameObject *> &shells);
+bool IsPathStraight(const std::vector<std::pair<int, int>> &path);
+std::string GetRotationCommand(Tank tank, int newDR, int newDC);
+
+
+
 /*
     MOVEMENT COMMANDS:
     output: f, b, S, RC45, RC90, RCC45, RCC90 as string
@@ -18,7 +38,7 @@
 
 */
 
-std::string AggressiveBot::Decide(const std::vector<std::vector<GameObject *>> &board, int playerNum) {
+std::string AggressiveBot::Decide(const std::vector<std::vector<GameObject *>> &board, int playerNum, int turnNum) {
     std::vector<GameObject *> mines;
     std::vector<GameObject *> shells;
     std::vector<GameObject *> tanks;
@@ -44,7 +64,7 @@ std::string AggressiveBot::Decide(const std::vector<std::vector<GameObject *>> &
         path.erase(path.begin());
     }
     // step 1: find the fastest route to the enemy tank avoiding mines and walls using bfs algorithm and store it in a vector of pairs of coordinates, in the case of no route then return "S" to shoot
-    if (myTank->GetTurnNum() %turnsToBFS == 0) FindPathToEnemyTankBFS(board, path, myTank, enemyTank);
+    if (turnNum %turnsToBFS == 0 || path.empty()) FindPathToEnemyTankBFS(board, path, myTank, enemyTank);
     if (path.empty()) {
         return "S";
     }
@@ -72,7 +92,7 @@ std::string AggressiveBot::Decide(const std::vector<std::vector<GameObject *>> &
     }
 }
 
-std::string DefensiveBot::Decide(const std::vector<std::vector<GameObject *>> &board, int playerNum) {
+std::string DefensiveBot::Decide(const std::vector<std::vector<GameObject *>> &board, int playerNum, int turnNum) {
     std::vector<GameObject *> mines;
     std::vector<GameObject *> shells;
     std::vector<GameObject *> tanks;
@@ -236,8 +256,6 @@ void FindPathToEnemyTankBFS(const std::vector<std::vector<GameObject *>> &board,
                     std::string type = board[nr][nc]->GetType();
                     if (type == "mine" || type == "wall")
                         continue;
-                    // Also block other objects.
-                    continue;
                 }
             }
             visited[next] = true;
@@ -304,9 +322,3 @@ std::string GetRotationCommand(Tank tank, int newDR, int newDC) {
         return "RCC90";
     }
 }
-
-struct pair_hash {
-    std::size_t operator()(const std::pair<int, int> &p) const {
-        return std::hash<int>()(p.first) ^ (std::hash<int>()(p.second) << 1);
-    }
-};

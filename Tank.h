@@ -16,7 +16,7 @@ private:
 public:
 	Tank(int r, int c, int dR, int dC, GameManager* gm, char tankSymbol = 'T', TankBot* bot = nullptr);
 	std::string GetType() const override;
-	void Update() override;
+	void Update(int turnNum) override;
 
 	bool Shoot();
 	void MoveForward();

@@ -34,7 +34,7 @@ public:
     GameObject(int r, int c, int dR, int dC, int hp, GameManager* gm);
 
     virtual std::string GetType() const = 0;
-    virtual void Update();
+    virtual void Update(int turnNum = 0);
     void ResetUpdated();
     int Translate(int amount);
     void RotateClockwise();
@@ -48,7 +48,6 @@ public:
     int GetHealth() const { return health; }
     char GetSymbol() const { return symbol; }
     bool IsUpdated() const { return updated; }
-    int GetTurnNum() const { return manager->GetTurnNum(); }
 
     friend class GameManager;
 };
@@ -57,14 +56,14 @@ class Wall : public GameObject {
 public:
     Wall(int r, int c, int dR, int dC, GameManager* gm);
     std::string GetType() const override;
-    void Update();
+    void Update(int turnNum = 0);
 };
 
 class Mine : public GameObject {
 public:
     Mine(int r, int c, int dR, int dC, GameManager* gm);
     std::string GetType() const override;
-    void Update();
+    void Update(int turnNum = 0);
 };
 
 class Shell : public GameObject {
@@ -73,6 +72,6 @@ private:
 public:
     Shell(int r, int c, int dR, int dC, GameManager* gm);
     std::string GetType() const override;
-    void Update();
+    void Update(int turnNum = 0);
     void SetOverMine(bool overMine) { isOverMine = overMine; }
 };
