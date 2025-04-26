@@ -11,6 +11,7 @@ private:
     int cols;
     std::vector<std::vector<GameObject*>> board;
     Tank *player1, *player2;
+    int turnNum = 0;
 
 public:
     void InitGame(int r, int c, std::vector<std::vector<char>> boardInput);
@@ -21,6 +22,7 @@ public:
     void Destroy(GameObject* obj);
     GameObject* GetGameObject(int r, int c, int offsetR = 0, int offsetC = 0);
     const std::vector<std::vector<GameObject*>>& GetBoard() const;
+    int GetTurnNum() const { return turnNum; }
 
     template<typename T>
     T* Instantiate(int r, int c, int dR = 0, int dC = 0, int offsetR = 0, int offsetC = 0) {

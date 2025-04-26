@@ -1,257 +1,9 @@
-
 #include "TankBot.h"
-#include "GameObject.h"
-#include <queue>
-#include <vector>
-#include <utility>
-#include <cmath>
-#include <iostream>
 #include "Tank.h"
-// 8-directional vectors
-static const std::vector<std::pair<int,int>> directions = {
-    std::pair<int,int>(-1,  0), std::pair<int,int>(1,  0),
-    std::pair<int,int>(0, -1), std::pair<int,int>(0,  1),
-    std::pair<int,int>(-1, -1), std::pair<int,int>(-1, 1),
-    std::pair<int,int>(1, -1), std::pair<int,int>(1,  1)
-};
-
-
-std::string AggressiveBot::Decide(const std::vector<std::vector<GameObject*>>& board, int playerNum) {
-    Tank* selfTank = nullptr;
-    Tank* enemyTank = nullptr;
-    
-    for (auto i = 0u; i < board.size(); ++i) {
-
-        for (auto j = 0u; j < board[i].size(); ++j) {
-
-            GameObject* obj = board[i][j];
-
-            if (obj && obj->GetType() == "tank") {
-
-                Tank* tank = static_cast<Tank*>(obj);
-
-                if (tank->GetPlayerNum() == playerNum) {
-
-                    selfTank = tank;
-                } else if (tank->GetPlayerNum() == (playerNum == 1 ? 2 : 1)) {
-                    enemyTank = tank;
-                }
-            }
-            if (selfTank && enemyTank) {
-                break; // Break the inner loop when both tanks are found
-            }
-        }
-        if (selfTank && enemyTank) {
-            break; // Break the outer loop as well
-        }
-    }
-    
-    if (!selfTank || !enemyTank) {
-            std::cerr << "error: null tank pointer for player " << playerNum << std::endl;
-            return "f";
-        }
-        
-        int rows = static_cast<int>(board.size());
-        int cols = static_cast<int>(board[0].size());
-        int self_R = selfTank->GetRow();
-        int self_C = selfTank->GetCol();
-        int enemy_R = enemyTank->GetRow();
-        int enemy_C = enemyTank->GetCol();
-    
-        // BFS to find shortest path
-        std::vector<std::vector<bool>> visited(rows, std::vector<bool>(cols, false));
-    
-        std::vector<std::vector<std::pair<int,int>>> parent(rows, std::vector<std::pair<int,int>>(cols, std::pair<int,int>(-1, -1)));
-        std::queue<std::pair<int,int>> queue;
-        visited[self_R][self_C] = true;
-        queue.push(std::pair<int,int>(self_R, self_C));
-        bool found = false;
-    
-        while (!queue.empty() && !found) {
-            std::pair<int,int> current_cell = queue.front();queue.pop();
-            int i = current_cell.first;
-            int j = current_cell.second;
-            for (const std::pair<int,int>& dir : directions) {
-    
-                int x = dir.first;
-    
-                int y = dir.second;
-    
-                int a = (i + x + rows) % rows;
-    
-                int b = (j + y + cols) % cols;
-    
-                if (!visited[a][b]) {
-    
-                    GameObject* obj = board[a][b];
-    
-                    if (obj && obj->GetType() == "wall") {
-    
-                        continue;
-    
-                    }
-    
-                    visited[a][b] = true;
-    
-                    parent[a][b] = std::pair<int,int>(i, j);
-    
-                    if (a == enemy_R && b == enemy_C) {
-    
-                        found = true;
-                        
-                        break;
-                    }
-                    queue.push(std::pair<int,int>(a, b));
-                }
-            }
-        }
-        // If no path is found, move forward
-        if (!found) {
-            return "f";
-        }
-    
-        // Backtrack to determine first move
-        int w = enemy_R;
-    
-        int z = enemy_C;
-    
-        while (!(parent[w][z].first == self_R && parent[w][z].second == self_C)) {
-    
-            std::pair<int,int> p = parent[w][z];
-    
-            w = p.first;
-    
-            z = p.second;
-    
-        }
-    
-        // Normalize to [-1,0,1]
-        int diff_Row = w - self_R;
-    
-        int diff_col = z - self_C;
-    
-        int stepi = (diff_Row > 0) ? 1 : ((diff_Row < 0) ? -1 : 0);
-    
-        int stepj = (diff_col > 0) ? 1 : ((diff_col < 0) ? -1 : 0);
-    
-    
-        int dir_Row = selfTank->GetDirRow();
-    
-        int dir_Col= selfTank->GetDirCol();
-    
-        // If already facing desired direction, try to shoot
-        if (dir_Row == stepi && dir_Col == stepj) {
-    
-            int i_ = self_R;
-    
-            int j_ = self_C;
-    
-            while (true) {
-    
-                i_ = (i_ + dir_Row + rows) % rows;
-    
-                j_ = (j_ + dir_Col + cols) % cols;
-    
-                if (i_ == enemy_R && j_ == enemy_C) {
-    
-                    return "S";
-                }
-    
-                GameObject* obj = board[i_][j_];
-    
-                if (obj && obj->GetType() == "wall") {
-    
-                    break;
-                }
-            }
-    
-            return "f";
-        }
-        // Rotate toward desired direction
-        int crossing = dir_Row * stepj - dir_Col * stepi;
-        if (crossing < 0) {
-    
-            return "RC45";
-    
-        } else {
-    
-            return "RCC45";
-        }
-    }
-
-std::string DefensiveBot::Decide(const std::vector<std::vector<GameObject*>>& board, int playerNum) {
-    Tank* selfTank = nullptr;
-    
-    for (auto i = 0u; i < board.size(); ++i) {
-
-        for (auto j = 0u; j < board[i].size(); ++j) {
-
-            GameObject* obj = board[i][j];
-            if (obj && obj->GetType() == "tank") {
-
-                Tank* tank = static_cast<Tank*>(obj);
-
-                if (tank->GetPlayerNum() == playerNum) {
-                    selfTank = tank;
-                    break ;
-                }
-            }
-            }
-            }
-     if (!selfTank) {
-        std::cerr << "error: null tank pointer for player " << playerNum << std::endl;
-        return "f";
-        }
-        int rows = static_cast<int>(board.size());
-        int cols = static_cast<int>(board[0].size());
-        int self_Row = selfTank->GetRow();
-        int self_Col = selfTank->GetCol();
-        int self_R_Dir = selfTank->GetDirRow();
-        int self_C_Dir = selfTank->GetDirCol();
-    
-        // Evade incoming shells within 3 steps
-        for (const std::pair<int,int>& dir : directions) {
-    
-            int i = dir.first;
-    
-            int j = dir.second;
-    
-            for (int step = 1; step <= 3; ++step) {
-                int x = (self_Row + i * step + rows) % rows;
-                int y = (self_Col + j * step + cols) % cols;
-                GameObject* obj = board[x][y];
-                if (obj && obj->GetType() == "shell") {
-                    return "b";
-                }
-                if (obj && obj->GetType() == "wall") {
-                    break;
-                }
-            }
-        }
-        // Avoid stepping on mine ahead
-    
-        int i_ = (self_Row + self_R_Dir + rows) % rows;
-    
-        int j_ = (self_Col + self_C_Dir + cols) % cols;
-    
-        GameObject* obj_ = board[i_][j_];
-    
-        if (obj_ && obj_->GetType() == "mine") {
-    
-            int crossing = self_R_Dir * 0 - self_C_Dir * 1;
-    
-            if (crossing < 0) {
-    
-                return "RC45";
-            } else {
-    
-                return "RCC45";
-            }
-        }
-        // Default patrol: rotate 90° clockwise
-        return "RC90";
-    }
-   
+#include <string>
+#include <queue>
+#include <algorithm>
+#include <unordered_map>
 
 /*
     MOVEMENT COMMANDS:
@@ -265,3 +17,296 @@ std::string DefensiveBot::Decide(const std::vector<std::vector<GameObject*>>& bo
     rotate counter clockwise 90 degrees: RCC90
 
 */
+
+std::string AggressiveBot::Decide(const std::vector<std::vector<GameObject *>> &board, int playerNum) {
+    std::vector<GameObject *> mines;
+    std::vector<GameObject *> shells;
+    std::vector<GameObject *> tanks;
+    FindObjects(board, mines, shells, tanks);
+    Tank *enemyTank, *myTank;
+    for (GameObject *tankObj : tanks) {
+        Tank *tank = dynamic_cast<Tank *>(tankObj);
+        if (tank->GetPlayerNum() != playerNum) {
+            enemyTank = tank;
+        }
+        else {
+            myTank = tank;
+        }
+    }
+    std::string run = RunFromShells(board, myTank, shells);
+    if (run != "") {
+        return run;
+    }
+
+    // Aggressive bot logic
+    //while the first tile in the path is not the current position of the tank then remove the first tile in the path
+    while (!path.empty() && (path[0].first != myTank->GetRow() || path[0].second != myTank->GetCol())) {
+        path.erase(path.begin());
+    }
+    // step 1: find the fastest route to the enemy tank avoiding mines and walls using bfs algorithm and store it in a vector of pairs of coordinates, in the case of no route then return "S" to shoot
+    if (myTank->GetTurnNum() %turnsToBFS == 0) FindPathToEnemyTankBFS(board, path, myTank, enemyTank);
+    if (path.empty()) {
+        return "S";
+    }
+    // step 2: if the route is a straight line (can also be diagonal) then orient the tank in that direction, if the tank is already in that direction then shoot
+    if (IsPathStraight(path)) {
+        int dR = path[1].first - path[0].first;
+        int dC = path[1].second - path[0].second;
+        if (dR == myTank->GetDirRow() && dC == myTank->GetDirCol()) {
+            return "S";
+        }
+        else {
+            return GetRotationCommand(*myTank, dR, dC);
+        }
+    }
+    // step 3: if the route is not a straight line then rotate the tank in the direction of the next tile in the route, if the tank is already in that direction then move forward
+    else {
+        int dR = path[1].first - path[0].first;
+        int dC = path[1].second - path[0].second;
+        if (dR == myTank->GetDirRow() && dC == myTank->GetDirCol()) {
+            return "f";
+        }
+        else {
+            return GetRotationCommand(*myTank, dR, dC);
+        }
+    }
+}
+
+std::string DefensiveBot::Decide(const std::vector<std::vector<GameObject *>> &board, int playerNum) {
+    std::vector<GameObject *> mines;
+    std::vector<GameObject *> shells;
+    std::vector<GameObject *> tanks;
+    FindObjects(board, mines, shells, tanks);
+    Tank *enemyTank, *myTank;
+    for (GameObject *tankObj : tanks) {
+        Tank *tank = dynamic_cast<Tank *>(tankObj);
+        if (tank->GetPlayerNum() != playerNum) {
+            enemyTank = tank;
+        }
+        else {
+            myTank = tank;
+        }
+    }
+    std::string run = RunFromShells(board, myTank, shells);
+    if (run != "") {
+        return run;
+    }
+
+    // TODO: Implement defensive bot logic
+    // step 1: calculate the manhattan distance to the enemy tank
+    // step 2: if the distance is less than 8 then move away from the enemy tank
+    // step 3: if the distance is greater than 8 then orient the tank in the direction of the enemy tank, if already in that direction then shoot
+}
+
+void FindObjects(
+    const std::vector<std::vector<GameObject *>> &board,
+    std::vector<GameObject *> &mines,
+    std::vector<GameObject *> &shells,
+    std::vector<GameObject *> &tanks) {
+
+    for (int i = 0; i < board.size(); ++i) {
+        for (int j = 0; j < board[i].size(); ++j) {
+            GameObject *obj = board[i][j];
+            if (obj != nullptr) {
+                if (obj->GetType() == "mine") {
+                    mines.push_back(obj);
+                }
+                else if (obj->GetType() == "shell") {
+                    shells.push_back(obj);
+                }
+                else if (obj->GetType() == "tank") {
+                    tanks.push_back(obj);
+                }
+            }
+        }
+    }
+}
+
+std::string RunFromShells(const std::vector<std::vector<GameObject *>> &board, Tank *tank, const std::vector<GameObject *> &shells) {
+    // create a bool matrix of the same size as the board
+    std::vector<std::vector<bool>> safe(board.size(), std::vector<bool>(board[0].size(), true));
+    
+    // for each null tile in the original board, mark it as "safe" in the clone, otherwise mark it as "danger"
+    for (int i = 0; i < board.size(); ++i) {
+        for (int j = 0; j < board[i].size(); ++j) {
+            if (board[i][j] != nullptr) {
+                safe[i][j] = false;
+            }
+        }
+    }
+
+    // for each shell in the original board, mark 8 tiles in front of the shell as "danger" in the bool matrix
+    for (GameObject *shell : shells) {
+        int r = shell->GetRow();
+        int c = shell->GetCol();
+        int dR = shell->GetDirRow();
+        int dC = shell->GetDirCol();
+        // mark the 8 tiles in front of the shell as "danger"
+        for (int i = 0; i < 8; ++i) {
+            int newR = (r + dR*i + board.size()*8) % board.size();
+            int newC = (c + dC*i + board[0].size()*8) % board[0].size();
+            safe[newR][newC] = false;
+        }
+    }
+
+    // if the tank is in a "danger" tile, if its facing a "safe" tile then move forward, if not then rotate in the direction of the "safe" tile
+    int r = tank->GetRow();
+    int c = tank->GetCol();
+    int dR = tank->GetDirRow();
+    int dC = tank->GetDirCol();
+    if (!safe[r][c]) {
+        // check if the tile in front of the tank is safe
+        if (safe[(r + dR + board.size()) % board.size()][(c + dC + board[0].size()) % board[0].size()]) {
+            return "f";
+        } else {
+            // find the nearest safe tile
+            // create a vector of pairs of coordinates for the 7 possible directions the tank can face
+            // even indexes are for clockwise rotation and odd indexes are for counterclockwise rotation
+            std::pair<int, int> directions[7];
+            for (int i = 0; i < 4; ++i) {
+                tank->RotateClockwise();
+                directions[2 * i] = {tank->GetDirRow(), tank->GetDirCol()};
+            }
+            for (int i = 0; i < 3; ++i) {
+                tank->RotateClockwise();
+                directions[2 * (2 - i) + 1] = {tank->GetDirRow(), tank->GetDirCol()};
+            }
+            tank->RotateClockwise();
+
+            // return the rotation command for the direction of the nearest safe tile
+            for (int i = 0; i < 7; ++i) {
+                int newR = (r + directions[i].first + board.size()) % board.size();
+                int newC = (c + directions[i].second + board[0].size()) % board[0].size();
+                if (safe[newR][newC]) {
+                    std::string command = "RC";
+                    if (i % 2 != 0) {
+                        command += "C";
+                    }
+                    if (i < 2) {
+                        command += "45";
+                    } else {
+                        command += "90";
+                    }
+                    return command;
+                }
+            }
+
+            // if no safe tile is found, return "S" to shoot
+            return "S";
+        }
+    }
+
+    return "";
+}
+
+void FindPathToEnemyTankBFS(const std::vector<std::vector<GameObject *>> &board, std::vector<std::pair<int, int>> &path, Tank *myTank, Tank *enemyTank) {
+    int rows = board.size();
+    int cols = board[0].size();
+    std::pair<int, int> start = {myTank->GetRow(), myTank->GetCol()};
+    std::pair<int, int> target = {enemyTank->GetRow(), enemyTank->GetCol()};
+
+    std::queue<std::pair<int, int>> q;
+    q.push(start);
+    std::unordered_map<std::pair<int, int>, std::pair<int, int>, pair_hash> parent;
+    std::unordered_map<std::pair<int, int>, bool, pair_hash> visited;
+    visited[start] = true;
+    bool found = false;
+
+    std::vector<std::pair<int, int>> neighbors = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
+
+    while (!q.empty()) {
+        auto cur = q.front();
+        q.pop();
+        if (cur == target) {
+            found = true;
+            break;
+        }
+        for (auto &d : neighbors) {
+            int nr = cur.first + d.first;
+            int nc = cur.second + d.second;
+            if (nr < 0 || nr >= rows || nc < 0 || nc >= cols)
+                continue;
+            std::pair<int, int> next = {nr, nc};
+            if (visited.find(next) != visited.end())
+                continue;
+            // Allow destination regardless of content.
+            if (!(nr == target.first && nc == target.second)) {
+                // Block cell if not empty and if it contains a mine or wall.
+                if (board[nr][nc] != nullptr) {
+                    std::string type = board[nr][nc]->GetType();
+                    if (type == "mine" || type == "wall")
+                        continue;
+                    // Also block other objects.
+                    continue;
+                }
+            }
+            visited[next] = true;
+            parent[next] = cur;
+            q.push(next);
+        }
+    }
+
+    path = std::vector<std::pair<int, int>>();
+
+    if (!found) {
+        return;
+    }
+
+    // Reconstruct the path from target to start.
+    auto cur = target;
+    while (cur != start) {
+        path.push_back(cur);
+        cur = parent[cur];
+    }
+    path.push_back(start);
+    std::reverse(path.begin(), path.end());
+    // Now path[0] is start and last element is enemy's position.
+}
+
+bool IsPathStraight(const std::vector<std::pair<int, int>> &path) {
+    if (path.size() < 2) {
+        return false;
+    }
+    int dR = path[1].first - path[0].first;
+    int dC = path[1].second - path[0].second;
+    for (size_t i = 2; i < path.size(); ++i) {
+        int newDR = path[i].first - path[i - 1].first;
+        int newDC = path[i].second - path[i - 1].second;
+        if (newDR != dR || newDC != dC) {
+            return false;
+        }
+    }
+    return true;
+}
+
+std::string GetRotationCommand(Tank tank, int newDR, int newDC) {
+    if (newDR == tank.GetDirRow() && newDC == tank.GetDirCol()) {
+        throw std::invalid_argument("Tank is already facing the desired direction");
+    }
+
+    // Calculate the number of 45-degree clockwise rotations needed
+    int needed45Rotations = -1;
+    for (int i = 0; i < 8; ++i) {
+        tank.RotateClockwise();
+        if (tank.GetDirRow() == newDR && tank.GetDirCol() == newDC) {
+            needed45Rotations = i + 1;
+        }
+    }
+
+    // Determine the rotation command based on the number of clockwise rotations
+    if (needed45Rotations == 1) {
+        return "RC45";
+    } else if (needed45Rotations == 7) {
+        return "RCC45";
+    } else if (needed45Rotations < 5) {
+        return "RC90";
+    } else {
+        return "RCC90";
+    }
+}
+
+struct pair_hash {
+    std::size_t operator()(const std::pair<int, int> &p) const {
+        return std::hash<int>()(p.first) ^ (std::hash<int>()(p.second) << 1);
+    }
+};

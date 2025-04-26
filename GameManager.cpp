@@ -37,7 +37,6 @@ void GameManager::InitGame(int r, int c, std::vector<std::vector<char>> boardInp
 void GameManager::GameLoop(){
     // Main game loop
     int noAmmo = 0;
-    int turn = 0;
     while (true) { 
         PrintBoard();
 
@@ -64,7 +63,7 @@ void GameManager::GameLoop(){
             }
         }
         // wait for user input or a timer then clear the screen
-        std::cout << turn;
+        std::cout << turnNum;
         std::this_thread::sleep_for(std::chrono::seconds(refreshRate/1000));
         std::cout << "\033[2J\033[H";
         #ifdef _WIN32
@@ -72,7 +71,7 @@ void GameManager::GameLoop(){
         #else
             std::cout << "\033[2J\033[H"; // Clear console on Linux/macOS
         #endif
-        turn++;
+        turnNum++;
         
         if (EndGame() || noAmmo >= 40) {
             break; // Exit the loop if game over

@@ -48,6 +48,7 @@ public:
     int GetHealth() const { return health; }
     char GetSymbol() const { return symbol; }
     bool IsUpdated() const { return updated; }
+    int GetTurnNum() const { return manager->GetTurnNum(); }
 
     friend class GameManager;
 };
