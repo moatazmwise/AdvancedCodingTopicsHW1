@@ -60,8 +60,7 @@ cd /path/to/AdvancedCodingTopicsHW1
 During execution, the program may generate the following output files:
 
     1: input_errors.txt , to this file we print errors we encountered during reading the input file.
-    2:OutputLog.txt , this file conatins the prints that describe the behaviour of the tanks during the game.
-    3:output_a.txt
-    4:output_b.txt
+    2:OutputLog.txt , this file conatins the prints that describe the behaviour of the tanks during the game from the beginning to the end.
+    
    
 
