@@ -46,7 +46,11 @@ void GameManager::GameLoop(){
         }
         // Update all game objects
         player1->Update(turnNum);
-        player2->Update(turnNum);
+        //check if player 2 is dead
+        if (player2->GetHealth() > 0) {
+            player2->Update(turnNum);
+        }
+        // Update all game objects on the board
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < cols; ++j) {
                 if (board[i][j] && !board[i][j]->IsUpdated()) {
@@ -82,13 +86,24 @@ void GameManager::GameLoop(){
 bool GameManager::EndGame(){
      // Check for game over conditions
      if (player1->GetHealth() <= 0 && player2->GetHealth() <= 0) {
-        std::cout << "Both players are destroyed. Game Over!" << std::endl;
+        std::cout << "Game Over! DRAW! " << std::endl;
+        logMove("Game Over! DRAW!");
+        std::cout << "player 1 " + player1->GetDeathMessage() << std::endl;
+        logMove("player 1 " + player1->GetDeathMessage());
+        std::cout << "player 2 " + player2->GetDeathMessage() << std::endl;
+        logMove("player 2 " + player2->GetDeathMessage());
         return true;
     } else if (player1->GetHealth() <= 0) {
         std::cout << "Player 2 wins!" << std::endl;
+        logMove("Player 2 wins!");
+        std::cout << "player 1 " + player1->GetDeathMessage() << std::endl;
+        logMove("player 1 " + player1->GetDeathMessage());
         return true;
     } else if (player2->GetHealth() <= 0) {
         std::cout << "Player 1 wins!" << std::endl;
+        logMove("Player 1 wins!");
+        std::cout << "player 2 " + player2->GetDeathMessage() << std::endl;
+        logMove("player 2 " + player2->GetDeathMessage());
         return true;
     }
     return false;
@@ -150,4 +165,10 @@ GameObject* GameManager::GetGameObject(int r, int c, int offsetR, int offsetC) {
 
 const std::vector<std::vector<GameObject*>>& GameManager::GetBoard() const {
     return board;
+}
+
+void GameManager::logMove(const std::string& message) const {
+    std::ofstream file("OutputLog.txt", std::ios::app);  // append mode
+    if (!file) return; // Fail silently if file can't be opened
+    file << message << '\n';
 }

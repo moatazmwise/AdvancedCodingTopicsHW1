@@ -28,6 +28,7 @@ private:
 
 protected:
     GameManager* manager;
+    std::string deathMessage = "GameObject destroyed";
     char symbol;
 
 public:
@@ -39,7 +40,7 @@ public:
     int Translate(int amount);
     void RotateClockwise();
     void RotateCounterClockwise();
-    void Damage(int amount);
+    void Damage(int amount, std::string damagerMessage = "none");
 
     int GetRow() const { return row; }
     int GetCol() const { return col; }
@@ -48,6 +49,7 @@ public:
     int GetHealth() const { return health; }
     char GetSymbol() const { return symbol; }
     bool IsUpdated() const { return updated; }
+    std::string GetDeathMessage() const { return deathMessage; }
 
     friend class GameManager;
 };
@@ -69,9 +71,11 @@ public:
 class Shell : public GameObject {
 private:
     bool isOverMine = false;
+    int playerNum = 0;
 public:
     Shell(int r, int c, int dR, int dC, GameManager* gm);
     std::string GetType() const override;
     void Update(int turnNum = 0);
     void SetOverMine(bool overMine) { isOverMine = overMine; }
+    void setPlayerNum(int num) { playerNum = num; }
 };

@@ -23,6 +23,7 @@ public:
     GameObject* GetGameObject(int r, int c, int offsetR = 0, int offsetC = 0);
     const std::vector<std::vector<GameObject*>>& GetBoard() const;
     int GetTurnNum() const { return turnNum; }
+    void logMove(const std::string& message) const;
 
     template<typename T>
     T* Instantiate(int r, int c, int dR = 0, int dC = 0, int offsetR = 0, int offsetC = 0) {

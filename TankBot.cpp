@@ -53,11 +53,12 @@ std::string AggressiveBot::Decide(const std::vector<std::vector<GameObject *>> &
             myTank = tank;
         }
     }
+
     std::string run = RunFromShells(board, myTank, shells);
     if (run != "") {
         return run;
     }
-
+    
     // Aggressive bot logic
     //while the first tile in the path is not the current position of the tank then remove the first tile in the path
     while (!path.empty() && (path[0].first != myTank->GetRow() || path[0].second != myTank->GetCol())) {
@@ -112,6 +113,7 @@ std::string DefensiveBot::Decide(const std::vector<std::vector<GameObject *>> &b
         return run;
     }
 
+    return "f"; // Default action if no other conditions are met
     // TODO: Implement defensive bot logic
     // step 1: calculate the manhattan distance to the enemy tank
     // step 2: if the distance is less than 8 then move away from the enemy tank
@@ -154,6 +156,8 @@ std::string RunFromShells(const std::vector<std::vector<GameObject *>> &board, T
             }
         }
     }
+
+    safe[tank->GetRow()][tank->GetCol()] = true; // mark the tank's position as "safe"
 
     // for each shell in the original board, mark 8 tiles in front of the shell as "danger" in the bool matrix
     for (GameObject *shell : shells) {
@@ -224,6 +228,8 @@ void FindPathToEnemyTankBFS(const std::vector<std::vector<GameObject *>> &board,
     int cols = board[0].size();
     std::pair<int, int> start = {myTank->GetRow(), myTank->GetCol()};
     std::pair<int, int> target = {enemyTank->GetRow(), enemyTank->GetCol()};
+
+    printf("calculating path from (%d, %d) to (%d, %d)\n", start.first, start.second, target.first, target.second);
 
     std::queue<std::pair<int, int>> q;
     q.push(start);

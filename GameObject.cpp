@@ -28,8 +28,9 @@ void GameObject::RotateCounterClockwise() {
     dirRow = newdirCol;
 }
 
-void GameObject::Damage(int amount) {
+void GameObject::Damage(int amount, std::string damagerMessage) {
     health -= amount;
+    deathMessage = damagerMessage;
     if (health <= 0) {
         manager->Destroy(this);
     }
@@ -85,7 +86,7 @@ void Shell::Update(int turnNum) {
         if (m == 0) {
             //damage the object in front of the shell
             GameObject* obj = manager->GetGameObject(GetRow(), GetCol(), GetDirRow(), GetDirCol());
-            obj->Damage(1);
+            obj->Damage(1, "destroyed by a shell from player " + std::to_string(playerNum));
             Damage(1);
         }
 

@@ -21,7 +21,6 @@ void Tank::Update(int turnNum) {
 
     if (!tankBot) return;
     std::string action = tankBot->Decide(manager->GetBoard(), playerNum, turnNum);
-
     
     if (action == "f") MoveForward();
     else if (!initReverse) {
@@ -56,15 +55,18 @@ bool Tank::Shoot() {
         GameObject* obj = manager->GetGameObject(GetRow(), GetCol(), GetDirRow(), GetDirCol());
         if (obj == nullptr) {
             // instantiate a shell in front of the tank
-            manager->Instantiate<Shell>(GetRow(), GetCol(), GetDirRow(), GetDirCol(), GetDirRow(), GetDirCol());
+            Shell* shell = manager->Instantiate<Shell>(GetRow(), GetCol(), GetDirRow(), GetDirCol(), GetDirRow(), GetDirCol());
+            shell->setPlayerNum(playerNum);
         } else if (obj->GetType() == "mine") {
             // replace the mine with a shell
             manager->Destroy(obj);
             Shell* shell = manager->Instantiate<Shell>(GetRow(), GetCol(), GetDirRow(), GetDirCol(), GetDirRow(), GetDirCol());
+            shell->setPlayerNum(playerNum);
             shell->SetOverMine(true);
+            shell->setPlayerNum(playerNum);
         } else {
             //damage the object in front of the tank without instantiating a shell
-            obj->Damage(1);
+            obj->Damage(1, "destroyed by a shell from player " + std::to_string(playerNum));
         }
         ammo--;
         shotCooldown = 5;
@@ -86,8 +88,8 @@ void Tank::MoveForward() {
         GameObject* obj = manager->GetGameObject(GetRow(), GetCol(), GetDirRow(), GetDirCol());
         std::string objType = obj->GetType();
         if (objType == "mine" || objType == "shell" || objType == "tank") {
-            obj->Damage(1); // Damage the object in front
-            Damage(1); // Damage the tank itself
+            obj->Damage(1, "was damaged by collision with player " + std::to_string(playerNum)); // Damage the object in front
+            Damage(1, "was damaged by collision lead by a bad choice"); // Damage the tank itself
             logMove("Tank " + std::to_string(playerNum) + " collided with " + objType + " while moving forward and exploded");
         }
         else logMove("Tank " + std::to_string(playerNum) + " moved forward and collided with " + objType + " bad move");
@@ -118,8 +120,8 @@ void Tank::Reverse() {
         GameObject* obj = manager->GetGameObject(GetRow(), GetCol(), -GetDirRow(), -GetDirCol());
         std::string objType = obj->GetType();
         if (objType == "mine" || objType == "shell" || objType == "tank") {
-            obj->Damage(1); // Damage the object in front
-            Damage(1); // Damage the tank itself
+            obj->Damage(1, "was damaged by collision with player " + std::to_string(playerNum)); // Damage the object in front
+            Damage(1, "was damaged by collision lead by a bad choice"); // Damage the tank itself
             logMove("Tank " + std::to_string(playerNum) + " collided with " + objType + " while reversing and exploded");
         }
         else logMove("Tank " + std::to_string(playerNum) + " moved backward and collided with " + objType + " bad move");

@@ -412,3 +412,906 @@ Tank 1: Tank 1 moved forward
 Tank 2: Tank 2 moved forward
 Tank 1: Tank 1 moved forward
 Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 90 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 90 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 15 ammo left
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 14 ammo left
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 15 ammo left
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 14 ammo left
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 15 ammo left
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 14 ammo left
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 15 ammo left
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 14 ammo left
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 15 ammo left
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 14 ammo left
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 15 ammo left
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 15 ammo left
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 14 ammo left
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 15 ammo left
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 14 ammo left
+Tank 1: Tank 1 shot a shell and has 15 ammo left
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 14 ammo left
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 13 ammo left
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 12 ammo left
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 15 ammo left
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 15 ammo left
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 shot a shell and has 14 ammo left
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 shot a shell and has 13 ammo left
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward and collided with wall bad move
+Tank 1: Tank 1 shot a shell and has 12 ammo left
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 45 degrees clockwise
+Tank 2: Tank 2 rotated 90 degrees clockwise
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 shot a shell and has 11 ammo left
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 moved forward
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 shot a shell and has 10 ammo left
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 shot a shell and has 9 ammo left
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 shot a shell and has 8 ammo left
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 shot a shell and has 7 ammo left
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 45 degrees clockwise
+Tank 1: Tank 1 rotated 90 degrees clockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 shot a shell and has 6 ammo left
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 shot a shell and has 5 ammo left
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 45 degrees counterclockwise
+Tank 1: Tank 1 rotated 90 degrees counterclockwise
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 shot a shell and has 4 ammo left
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
+Tank 1: Tank 1 attempted to shoot but is on cooldown bad move
+Tank 2: Tank 2 moved forward
