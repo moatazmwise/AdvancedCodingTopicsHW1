@@ -16,7 +16,7 @@ class DefensiveBot : public TankBot {
 
 class AggressiveBot : public TankBot {
     private:
-        int turnsToBFS = 1;
+        int turnsToBFS = 5;
         std::vector<std::pair<int, int>> path = std::vector<std::pair<int, int>>();
     public:
         std::string Decide(const std::vector<std::vector<GameObject*>>& board, int playerNum, int turnNum) override;
