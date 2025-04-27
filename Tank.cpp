@@ -146,3 +146,28 @@ void Tank::logMove(const std::string& action) const {
     if (!file) return; // Fail silently if file can't be opened
     file << "Tank " << playerNum << ": " << action << '\n';
 }
+
+void Tank::GetSymbol(char* symbol) const {
+    for (int i = 0; i < 9; ++i) {
+        symbol[i] = ' ';
+    }
+    symbol[4] = this->symbol;
+
+    if (GetDirCol() == 0 && GetDirRow() == 1) {
+        symbol[7] = '|';
+    } else if (GetDirCol() == 1 && GetDirRow() == 0) {
+        symbol[5] = '-';
+    } else if (GetDirCol() == 0 && GetDirRow() == -1) {
+        symbol[1] = '|';
+    } else if (GetDirCol() == -1 && GetDirRow() == 0) {
+        symbol[3] = '-';
+    } else if (GetDirCol() == -1 && GetDirRow() == 1) {
+        symbol[6] = '/';
+    } else if (GetDirCol() == 1 && GetDirRow() == 1) {
+        symbol[8] = char(92);
+    } else if (GetDirCol() == 1 && GetDirRow() == -1) {
+        symbol[2] = '/';
+    } else if (GetDirCol() == -1 && GetDirRow() == -1) {
+        symbol[0] = char(92);
+    }
+}

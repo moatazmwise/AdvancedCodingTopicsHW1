@@ -110,20 +110,28 @@ bool GameManager::EndGame(){
 }
 
 void GameManager::PrintBoard() const {
+    char* symbol = new char[9];
+    for (int i = 0; i < 9; ++i) {
+        symbol[i] = ' ';
+    }
     //print the board with symbols and one space between each symbol
     for (int i = 0; i < rows; ++i) {
-        std::cout << " "; 
-        for (int j = 0; j < cols; ++j) {
-            if (board[i][j] != nullptr) {
-                std::cout << board[i][j]->GetSymbol() << " ";
-            } else {
-                std::cout << "  "; 
+        for (int x = 0; x<3; x++){
+            for (int j = 0; j < cols; ++j) {
+                if (board[i][j] != nullptr) board[i][j]->GetSymbol(symbol);
+                for (int z = 0; z<3; z++){
+                    if (board[i][j] != nullptr) {
+                        std::cout << symbol[z+3*x] << "";
+                    } else {
+                        std::cout << " "; 
+                    }
+                }
             }
+            std::cout << std::endl; // New line after each row of symbols
         }
-        std::cout << std::endl;
-        std::cout << std::endl; // Extra space between rows
     }
 }
+
 
 int GameManager::Translate(GameObject* obj, int amount) {
     int moved = 0;

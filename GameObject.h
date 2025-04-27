@@ -47,7 +47,7 @@ public:
     int GetDirRow() const { return dirRow; }
     int GetDirCol() const { return dirCol; }
     int GetHealth() const { return health; }
-    char GetSymbol() const { return symbol; }
+    virtual void GetSymbol(char* symbol) const;
     bool IsUpdated() const { return updated; }
     std::string GetDeathMessage() const { return deathMessage; }
 
@@ -78,4 +78,5 @@ public:
     void Update(int turnNum = 0);
     void SetOverMine(bool overMine) { isOverMine = overMine; }
     void setPlayerNum(int num) { playerNum = num; }
+    void GetSymbol(char* symbol) const override;
 };

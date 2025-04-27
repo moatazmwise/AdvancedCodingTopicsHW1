@@ -4,6 +4,7 @@
 #include <queue>
 #include <algorithm>
 #include <unordered_map>
+#include <cmath>
 
 struct pair_hash {
     std::size_t operator()(const std::pair<int, int> &p) const {
@@ -94,6 +95,7 @@ std::string AggressiveBot::Decide(const std::vector<std::vector<GameObject *>> &
 }
 
 std::string DefensiveBot::Decide(const std::vector<std::vector<GameObject *>> &board, int playerNum, int turnNum) {
+    (void)turnNum; // Unused parameter
     std::vector<GameObject *> mines;
     std::vector<GameObject *> shells;
     std::vector<GameObject *> tanks;
@@ -113,11 +115,54 @@ std::string DefensiveBot::Decide(const std::vector<std::vector<GameObject *>> &b
         return run;
     }
 
+    // Defensive bot logic
+    // find the dominant direction to the enemy tank
+    int dR = enemyTank->GetRow() - myTank->GetRow();
+    int dC = enemyTank->GetCol() - myTank->GetCol();
+    float distance = sqrt(pow(dR, 2) + pow(dC, 2));
+
+    if (abs(dR) > abs(dC)/2) {
+        dC = 0;
+        dR = dR / abs(dR);
+    } else if (abs(dC) > abs(dR)/2) {
+        dR = 0;
+        dC = dC / abs(dC);
+    } else {
+        dR = dR / abs(dR);
+        dC = dC / abs(dC);
+    }
+    
+    if (distance < 6){
+        // look to the other direction and move in that direction
+        printf("runnin away   %f\n", distance);
+        dR = -dR;
+        dC = -dC;
+        int targetRow = myTank->GetRow() + dR;
+        int targetCol = myTank->GetCol() + dC;
+        targetRow = (targetRow + board.size()) % board.size();
+        targetCol = (targetCol + board[0].size()) % board[0].size();
+
+        // if the tank is already in that direction then attempt to move forward
+        if (dR == myTank->GetDirRow() && dC == myTank->GetDirCol()) {
+            // check if the tile in front of the tank is empty
+            GameObject *obj = board[targetRow][targetCol];
+            if (obj != nullptr) {
+                return "S";
+            }
+            else {
+                return "f";
+            }
+        }
+    }
+
+    if (dR == myTank->GetDirRow() && dC == myTank->GetDirCol()) {
+        return "S";
+    }
+    else {
+        return GetRotationCommand(*myTank, dR, dC);
+    }
+
     return "f"; // Default action if no other conditions are met
-    // TODO: Implement defensive bot logic
-    // step 1: calculate the manhattan distance to the enemy tank
-    // step 2: if the distance is less than 8 then move away from the enemy tank
-    // step 3: if the distance is greater than 8 then orient the tank in the direction of the enemy tank, if already in that direction then shoot
 }
 
 void FindObjects(
@@ -126,8 +171,8 @@ void FindObjects(
     std::vector<GameObject *> &shells,
     std::vector<GameObject *> &tanks) {
 
-    for (int i = 0; i < board.size(); ++i) {
-        for (int j = 0; j < board[i].size(); ++j) {
+    for (size_t i = 0; i < board.size(); ++i) {
+        for (size_t j = 0; j < board[i].size(); ++j) {
             GameObject *obj = board[i][j];
             if (obj != nullptr) {
                 if (obj->GetType() == "mine") {
@@ -149,8 +194,8 @@ std::string RunFromShells(const std::vector<std::vector<GameObject *>> &board, T
     std::vector<std::vector<bool>> safe(board.size(), std::vector<bool>(board[0].size(), true));
     
     // for each null tile in the original board, mark it as "safe" in the clone, otherwise mark it as "danger"
-    for (int i = 0; i < board.size(); ++i) {
-        for (int j = 0; j < board[i].size(); ++j) {
+    for (size_t i = 0; i < board.size(); ++i) {
+        for (size_t j = 0; j < board[i].size(); ++j) {
             if (board[i][j] != nullptr) {
                 safe[i][j] = false;
             }
@@ -305,7 +350,7 @@ bool IsPathStraight(const std::vector<std::pair<int, int>> &path) {
 
 std::string GetRotationCommand(Tank tank, int newDR, int newDC) {
     if (newDR == tank.GetDirRow() && newDC == tank.GetDirCol()) {
-        throw std::invalid_argument("Tank is already facing the desired direction");
+        return "";
     }
 
     // Calculate the number of 45-degree clockwise rotations needed

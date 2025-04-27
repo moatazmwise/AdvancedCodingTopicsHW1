@@ -9,6 +9,7 @@ int GameObject::Translate(int amount) {
 }
 
 void GameObject::Update(int turnNum) {
+    (void)turnNum; // Unused parameter
     updated = true;
 }
 
@@ -36,6 +37,12 @@ void GameObject::Damage(int amount, std::string damagerMessage) {
     }
 }
 
+void GameObject::GetSymbol(char* symbol) const {
+    for (int i = 0; i < 9; ++i) {
+        symbol[i] = this->symbol;
+    }
+}
+
 Wall::Wall(int r, int c, int dR, int dC, GameManager* gm) : GameObject(r, c, dR, dC, 2, gm) {
     symbol = '#';
 }
@@ -45,6 +52,7 @@ std::string Wall::GetType() const {
 }
 
 void Wall::Update(int turnNum) {
+    (void)turnNum; // Unused parameter
     GameObject::Update();
 }
 
@@ -57,6 +65,7 @@ std::string Mine::GetType() const {
 }
 
 void Mine::Update(int turnNum) {
+    (void)turnNum; // Unused parameter
     GameObject::Update();
 }
 
@@ -64,11 +73,19 @@ Shell::Shell(int r, int c, int dR, int dC, GameManager* gm) : GameObject(r, c, d
     symbol = '*';
 }
 
+void Shell::GetSymbol(char* symbol) const {
+    for (int i = 0; i < 9; ++i) {
+        symbol[i] = ' ';
+    }
+    symbol[4] = this->symbol;
+}
+
 std::string Shell::GetType() const {
     return "shell";
 }
 
 void Shell::Update(int turnNum) {
+    (void)turnNum; // Unused parameter
     GameObject::Update();
     for (int i = 0; i < 2; ++i) {
         int m = Translate(1);

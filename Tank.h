@@ -25,6 +25,7 @@ public:
 	void Rotate45(bool clockwise);
 	void Rotate90(bool clockwise);
 	void logMove(const std::string& action) const;
+	void GetSymbol(char* symbol) const override;
 
 	int GetAmmo() const { return ammo; }
 	void SetPlayerNum(int num) { playerNum = num; }
