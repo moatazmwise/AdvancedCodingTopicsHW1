@@ -89,7 +89,7 @@ void Tank::MoveForward() {
         std::string objType = obj->GetType();
         if (objType == "mine" || objType == "shell" || objType == "tank") {
             obj->Damage(1, "was damaged by collision with player " + std::to_string(playerNum)); // Damage the object in front
-            Damage(1, "was damaged by collision lead by a bad choice"); // Damage the tank itself
+            Damage(1, "was damaged by collision with a " + objType); // Damage the tank itself
             logMove("Tank " + std::to_string(playerNum) + " collided with " + objType + " while moving forward and exploded");
         }
         else logMove("Tank " + std::to_string(playerNum) + " moved forward and collided with " + objType + " bad move");

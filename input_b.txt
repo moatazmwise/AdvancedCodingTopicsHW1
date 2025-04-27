@@ -1,4 +1,6 @@
 dimensions: 20x20
+printBoard: false
+refreshRate: 300
 ~####################
 ~       ##         #
 ~      #  #     #                             

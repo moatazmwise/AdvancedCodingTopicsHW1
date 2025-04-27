@@ -1,4 +1,6 @@
-dimensions: 10x10
+dimensions:10x10
+printBoard:true
+refreshRate:300
 ~##########
 ~#   #   ##
 ~#   #  # #

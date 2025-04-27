@@ -6,7 +6,8 @@
 
 class GameManager {
 private:
-    int refreshRate = 300; // milliseconds
+    int refreshRate = 200; // milliseconds
+    bool printBoard = false; // Flag to control board printing
     int rows;
     int cols;
     std::vector<std::vector<GameObject*>> board;
@@ -14,7 +15,7 @@ private:
     int turnNum = 0;
 
 public:
-    void InitGame(int r, int c, std::vector<std::vector<char>> boardInput);
+    void InitGame(int r, int c, std::vector<std::vector<char>> boardInput, bool printBoard, int refreshRate);
     void GameLoop();
     bool EndGame();
     void PrintBoard() const;

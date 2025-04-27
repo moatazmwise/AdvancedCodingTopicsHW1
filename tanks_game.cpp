@@ -6,6 +6,9 @@
 
 std::string filename = "input_errors.txt"; // error file name
 
+bool printBoard = false; // Flag to control board printing
+int refreshRate = 200; // milliseconds
+
 //tanks positions
 int x1Pos = 0; // tank1 x
 int y1Pos = 0; // tank1 y
@@ -85,6 +88,37 @@ bool read_input_file(const std::string& filePath) {
                 y2Pos = std::stoi(y);
             }
             continue;
+        }
+        //check if the line starts with refreshRate:
+        if (line.rfind("refreshRate:", 0) == 0) {
+            // Parse refresh rate information
+            // If an error occurs, log it
+            std::string rateInfo = line.substr(line.find(":") + 1);
+            try {
+                int NrefreshRate = std::stoi(rateInfo);
+                if (NrefreshRate > 0) {
+                    refreshRate = NrefreshRate;
+                }
+            }
+            catch (const std::exception& e) {
+                log_error("Invalid refresh rate in input file: " + rateInfo);
+                continue;
+            }
+            
+        }
+        //check if the line starts with printBoard:
+        if (line.rfind("printBoard:", 0) == 0) {
+            // Parse print board information
+            // If an error occurs, log it
+            std::string printInfo = line.substr(line.find(":") + 1);
+            if (printInfo == "true") {
+                printBoard = true;
+            } else if (printInfo == "false") {
+                printBoard = false;
+            } else {
+                log_error("Invalid print board value in input file: " + printInfo);
+                continue;
+            }
         }
         //skip empty lines
         if (line.empty()) {
@@ -175,7 +209,7 @@ int main(int argc, char* argv[]) {
         board[height-1][width-1] = '2';
     }
 
-    game_manager.InitGame(width, height, board); // Initialize the game with the board
+    game_manager.InitGame(width, height, board, printBoard, refreshRate); // Initialize the game with the board
     game_manager.GameLoop(); // Main game loop
 
     return 0;

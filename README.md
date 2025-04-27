@@ -20,9 +20,17 @@
 
   each row that represents a row on the game board should start with ~.
 
-  the dimensions of the game board are given to us in the input file  in the format : dimensions: y x z.
+  the dimensions of the game board are given to us in the input file  in the format : dimensions: int X int.
 
   The initial positions of the players on the board are provided in the input file, formatted as: player1: a x b, where 'a' is a value between 0 and the number of rows - 1, and 'b' is a value between 0 and the number of columns - 1."
+
+  The refesh rate of printing the board and proccesing the game is also passed as an inputin the input file formatted: refreshRate:xxxx 
+  where xxx is the frequency in milliseconds
+
+  The option to print the board is also in there as a parameter in the input file in the following format:  printBoard:xxxx
+  where xxxx is either true of false
+  IMPORTANT : the printing proccess clears the terminal each iteration
+
 ## comipling: 
     
     the homework should compile on linux with gcc 11.4 or above, with the flags:

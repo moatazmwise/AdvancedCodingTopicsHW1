@@ -134,7 +134,6 @@ std::string DefensiveBot::Decide(const std::vector<std::vector<GameObject *>> &b
     
     if (distance < 6){
         // look to the other direction and move in that direction
-        printf("runnin away   %f\n", distance);
         dR = -dR;
         dC = -dC;
         int targetRow = myTank->GetRow() + dR;
@@ -273,8 +272,6 @@ void FindPathToEnemyTankBFS(const std::vector<std::vector<GameObject *>> &board,
     int cols = board[0].size();
     std::pair<int, int> start = {myTank->GetRow(), myTank->GetCol()};
     std::pair<int, int> target = {enemyTank->GetRow(), enemyTank->GetCol()};
-
-    printf("calculating path from (%d, %d) to (%d, %d)\n", start.first, start.second, target.first, target.second);
 
     std::queue<std::pair<int, int>> q;
     q.push(start);

@@ -3,7 +3,9 @@
 #include <thread>
 #include <chrono>
 
-void GameManager::InitGame(int r, int c, std::vector<std::vector<char>> boardInput) {
+void GameManager::InitGame(int r, int c, std::vector<std::vector<char>> boardInput, bool printBoard, int refreshRate) {
+    this->refreshRate = refreshRate;
+    this->printBoard = printBoard;
     rows = r;
     cols = c;
     board.resize(rows, std::vector<GameObject*>(cols, nullptr));
@@ -38,7 +40,7 @@ void GameManager::GameLoop(){
     // Main game loop
     int noAmmo = 0;
     while (true) { 
-        PrintBoard();
+        if (printBoard) PrintBoard();
 
         // check if both tamks ran out of ammo if so end the game after 40 turns
         if (player1->GetAmmo() <= 0 && player2->GetAmmo() <= 0) {
@@ -67,14 +69,15 @@ void GameManager::GameLoop(){
             }
         }
         // wait for user input or a timer then clear the screen
-        std::cout << turnNum;
-        std::this_thread::sleep_for(std::chrono::milliseconds(refreshRate));
-        std::cout << "\033[2J\033[H";
-        #ifdef _WIN32
-            system("cls"); // Clear console on Windows
-        #else
-            std::cout << "\033[2J\033[H"; // Clear console on Linux/macOS
-        #endif
+        if (printBoard){
+            std::this_thread::sleep_for(std::chrono::milliseconds(refreshRate));
+            std::cout << "\033[2J\033[H";
+            #ifdef _WIN32
+                system("cls"); // Clear console on Windows
+            #else
+                std::cout << "\033[2J\033[H"; // Clear console on Linux/macOS
+            #endif
+        }
         turnNum++;
         
         if (EndGame()) {
