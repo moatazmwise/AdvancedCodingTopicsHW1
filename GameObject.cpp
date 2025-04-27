@@ -69,15 +69,36 @@ void Mine::Update(int turnNum) {
     GameObject::Update();
 }
 
+void Mine::GetSymbol(char* symbol) const {
+    for (int i = 0; i < 9; ++i) {
+        if (i%2 == 0) {
+            symbol[i] = this->symbol;
+        } else {
+            symbol[i] = ' ';
+        }
+    }
+}
+
 Shell::Shell(int r, int c, int dR, int dC, GameManager* gm) : GameObject(r, c, dR, dC, 1, gm) {
     symbol = '*';
 }
 
 void Shell::GetSymbol(char* symbol) const {
-    for (int i = 0; i < 9; ++i) {
-        symbol[i] = ' ';
+    if (isOverMine) {
+        for (int i = 0; i < 9; ++i) {
+            if (i%2 == 0) {
+                symbol[i] = '@';
+            } else {
+                symbol[i] = ' ';
+            }
+        }
+        symbol[4] = this->symbol;
+    } else {
+        for (int i = 0; i < 9; ++i) {
+            symbol[i] = ' ';
+        }
+        symbol[4] = this->symbol;
     }
-    symbol[4] = this->symbol;
 }
 
 std::string Shell::GetType() const {

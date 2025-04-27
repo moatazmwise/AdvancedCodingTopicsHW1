@@ -66,6 +66,7 @@ public:
     Mine(int r, int c, int dR, int dC, GameManager* gm);
     std::string GetType() const override;
     void Update(int turnNum = 0);
+    void GetSymbol(char* symbol) const override;
 };
 
 class Shell : public GameObject {

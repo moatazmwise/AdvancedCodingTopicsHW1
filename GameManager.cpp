@@ -68,7 +68,7 @@ void GameManager::GameLoop(){
         }
         // wait for user input or a timer then clear the screen
         std::cout << turnNum;
-        std::this_thread::sleep_for(std::chrono::seconds(refreshRate/1000));
+        std::this_thread::sleep_for(std::chrono::milliseconds(refreshRate));
         std::cout << "\033[2J\033[H";
         #ifdef _WIN32
             system("cls"); // Clear console on Windows
@@ -77,7 +77,15 @@ void GameManager::GameLoop(){
         #endif
         turnNum++;
         
-        if (EndGame() || noAmmo >= 40) {
+        if (EndGame()) {
+            break; // Exit the loop if game over
+        }
+        if(noAmmo >= 40){
+            std::cout << "Game Over! DRAW! " << std::endl;
+            std::cout << "both tanks are out of ammo" << std::endl;
+            logMove("Game Over! DRAW!");
+            logMove("both tanks are out of ammo");
+            
             break; // Exit the loop if game over
         }
     }

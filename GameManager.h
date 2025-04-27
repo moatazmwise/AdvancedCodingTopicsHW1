@@ -6,7 +6,7 @@
 
 class GameManager {
 private:
-    int refreshRate = 1000; // milliseconds
+    int refreshRate = 300; // milliseconds
     int rows;
     int cols;
     std::vector<std::vector<GameObject*>> board;
